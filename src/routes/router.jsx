@@ -18,6 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("http://localhost:5000/touristsSpot"),
       },
       {
         path: "/signIn",
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSpot />,
+        loader: () => fetch("http://localhost:5000/touristsSpot"),
       },
       {
         path: "/addTouristsSpot",
@@ -46,6 +48,7 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
+        loader: (params) => fetch(`http://localhost:5000/touristsSpot/${params.email}`)
       },
     ],
   },
