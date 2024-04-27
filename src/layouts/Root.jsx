@@ -3,10 +3,10 @@ import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const Root = () => {
     return (
-        <div>
+        <div className="bg-base-content min-h-screen">
             <div className="container mx-auto">
             <Navbar/>
-            <Outlet/>
+            <Outlet />
             </div>
         </div>
     );

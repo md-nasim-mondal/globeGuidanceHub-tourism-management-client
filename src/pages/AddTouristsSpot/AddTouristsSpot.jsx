@@ -5,8 +5,31 @@ const AddTouristsSpot = () => {
   const handleAddSpot = (e) => {
     e.preventDefault();
     const form = e.target;
-    const country = form.country.value;
-    console.log(country);
+    const image = form.photo.value;
+    const touristsSpotName = form.spotName.value;
+    const countryName = form.country.value;
+    const location = form.location.value;
+    const shortDescription = form.description.value;
+    const averageCost = form.averageCost.value;
+    const seasonality = form.seasonality.value;
+    const travelTime = form.travelTime.value;
+    const totalVisitorsPerYear = form.totalVisitors.value;
+    const userName = form.userName.value;
+    const userEmail = form.userEmail.value;
+    const spot = {
+      image,
+      touristsSpotName,
+      countryName,
+      location,
+      shortDescription,
+      averageCost,
+      seasonality,
+      travelTime,
+      totalVisitorsPerYear,
+      userName,
+      userEmail,
+    };
+    console.log(spot);
   };
   return (
     <div>
@@ -29,7 +52,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="spotName"
                   placeholder="Enter Tourists Spot Name"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -42,7 +65,8 @@ const AddTouristsSpot = () => {
                 <select
                   name="country"
                   id="country"
-                  className="font-semibold text-xl w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600">
+                  className="font-semibold text-xl w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600">
+                  <option>Select Country</option>
                   <option value="Bangladesh">Bangladesh</option>
                   <option value="Indonesia">Indonesia</option>
                   <option value="Thailand">Thailand</option>
@@ -54,7 +78,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="countryName"
                   placeholder="Enter Spot Country Name"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 /> */}
               </div>
@@ -68,7 +92,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="location"
                   placeholder="Enter spot location"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -82,7 +106,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="travelTime"
                   placeholder="Enter travel_time => like- 7 days"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -95,10 +119,10 @@ const AddTouristsSpot = () => {
                 <input
                   type="text"
                   name="userName"
-                  placeholder={user.displayName}
-                  value={user.displayName}
+                  placeholder={user?.displayName}
+                  value={user?.displayName}
                   readOnly
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -114,7 +138,7 @@ const AddTouristsSpot = () => {
                   type="url"
                   name="photo"
                   placeholder="Enter Spot Photo URL"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -128,7 +152,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="averageCost"
                   placeholder="Enter Spot Average Cost"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -142,7 +166,7 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="seasonality"
                   placeholder="Enter seasonality - like summer, winter"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -156,13 +180,13 @@ const AddTouristsSpot = () => {
                   type="number"
                   name="totalVisitors"
                   placeholder="Enter totalVisitorsPerYear => like- 10000"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text  font-semibold text-lg text-black">
                     User Email
                   </span>
                 </label>
@@ -170,8 +194,9 @@ const AddTouristsSpot = () => {
                   type="email"
                   name="userEmail"
                   placeholder="Please Enter Your Email by which Email You Signed In"
-                    defaultValue={user.email}
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+                  value={user?.email}
+                  readOnly
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -186,12 +211,12 @@ const AddTouristsSpot = () => {
                 <textarea
                   name="description"
                   id="description"
-                  className="w-full min-h-32 px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"></textarea>
+                  className="w-full px-4 py-3 md:min-h-32 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"></textarea>
               </div>
               <input
                 type="submit"
                 value="Add Tourists Spot"
-                className="btn w-full bg-[#D2B48C] border-2 rounded-md border-[#331A15]"
+                className="btn w-full bg-[#D2B48C] border-2 rounded-md border-[#331A15] text-black"
               />
             </div>
           </form>

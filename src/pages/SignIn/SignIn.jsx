@@ -100,7 +100,7 @@ const SignIn = () => {
     <div>
       <form
         onSubmit={handleLogin}
-        className="card-body  md:w-3/4 lg:w-1/2 mx-auto bg-primary-content p-2 md:p-6 lg:p-10  rounded-xl my-12 animate__animated animate_zoomInUp">
+        className="card-body  md:w-3/4 lg:w-1/2 mx-auto bg-primary-content dark:bg-slate-400 dark:bg-opacity-70 p-2 md:p-6 lg:p-10  rounded-xl my-12 animate__animated animate_zoomInUp">
         <h2 className="text-3xl font-bold text-black my-10 text-center">
           SignIn your account
         </h2>
