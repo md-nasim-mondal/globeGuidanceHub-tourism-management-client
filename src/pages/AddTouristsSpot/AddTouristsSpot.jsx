@@ -4,7 +4,9 @@ const AddTouristsSpot = () => {
   const { user } = useAuth();
   const handleAddSpot = (e) => {
     e.preventDefault();
+
     const form = e.target;
+
     const image = form.photo.value;
     const touristsSpotName = form.spotName.value;
     const countryName = form.country.value;
@@ -16,7 +18,8 @@ const AddTouristsSpot = () => {
     const totalVisitorsPerYear = form.totalVisitors.value;
     const userName = form.userName.value;
     const userEmail = form.userEmail.value;
-    const spot = {
+
+    const newSpot = {
       image,
       touristsSpotName,
       countryName,
@@ -29,7 +32,11 @@ const AddTouristsSpot = () => {
       userName,
       userEmail,
     };
-    console.log(spot);
+    console.log(newSpot);
+
+    // send data to the server
+    
+
   };
   return (
     <div>
