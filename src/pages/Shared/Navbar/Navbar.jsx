@@ -1,4 +1,4 @@
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import useAuth from "../../../providers/Auth";
@@ -6,7 +6,8 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { user, logOut } = useAuth;
+  const navigate = useNavigate();
+  const { user, logOut } = useAuth();
   const handleSignOut = () => {
     logOut()
       .then(() => {
@@ -14,18 +15,18 @@ const Navbar = () => {
           text: "SignOut Successful",
           icon: "success",
           showConfirmButton: false,
-          position: "top-center",
+          position: "top",
           timer: 1500,
         });
-        Navigate("/");
+        navigate("/");
       })
       .catch((error) => {
         Swal.fire({
           text: `${error.message}`,
           icon: "error",
           showConfirmButton: false,
-          position: "top-center",
-          timer: 1500,
+          position: "top",
+          timer: 10000,
         });
       });
   };
