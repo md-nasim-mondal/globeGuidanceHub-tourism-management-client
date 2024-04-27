@@ -11,7 +11,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { user, logOut } = useAuth();
-  const displayName = user.displayName;
+  const displayName = user?.displayName;
   const photoURL = user?.photoURL ;
   const handleSignOut = () => {
     logOut()
