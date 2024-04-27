@@ -158,7 +158,7 @@ const SignIn = () => {
           Don&apos;t have an account?{" "}
           <Link
             className=" text-blue-600 font-bold underline pl-1"
-            to={"/register"}>
+            to={"/signUp"}>
             SignUp
           </Link>{" "}
         </p>

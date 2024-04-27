@@ -2,12 +2,17 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import useAuth from "../../../providers/Auth";
+import userDefaultPic from "../../../assets/images/user.png";
 import Swal from "sweetalert2";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { user, logOut } = useAuth();
+  const displayName = user.displayName;
+  const photoURL = user?.photoURL ;
   const handleSignOut = () => {
     logOut()
       .then(() => {
@@ -138,8 +143,8 @@ const Navbar = () => {
       <div className="animate__animated animate__backInLeft navbar-end">
         {user ? (
           <div className="flex items-center">
-            {/* <div className="tooltip tooltip-left" data-tip={displayName}>
-              <div
+            <div data-tooltip-id="my-tooltip" data-tooltip-content={displayName}>
+            <div
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar">
@@ -150,7 +155,7 @@ const Navbar = () => {
                   />
                 </div>
               </div>
-            </div> */}
+            </div>
             <button
               onClick={() => {
                 setOpen(false);
@@ -185,6 +190,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <Tooltip id="my-tooltip" place="left" />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const handleRegister = (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
@@ -63,10 +63,10 @@ const SignUp = () => {
   return (
     <div>
       <form
-        onSubmit={handleRegister}
+        onSubmit={handleSignUp}
         className="card-body md:w-3/4 lg:w-1/2 mx-auto  p-6 rounded-xl my-12 bg-teal-500 ">
         <h2 className="text-4xl my-4 text-center text-white font-bold">
-          Register Your Account
+          SignUp Your Account
         </h2>
         <div className="form-control">
           <label className="label block font-semibold">
@@ -160,7 +160,7 @@ const SignUp = () => {
           Want to login with a social account?
           <br />
           Than Go to
-          <Link className="text-blue-600 font-bold ml-2" to={"/login"}>
+          <Link className="text-blue-600 font-bold ml-2" to={"/signIn"}>
             SignIn Page
           </Link>
         </p>
