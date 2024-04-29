@@ -2,17 +2,19 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../providers/Auth";
 import { useState } from "react";
 import TouristsSpotCard from "../../components/TouristsSpotCard/TouristsSpotCard";
-import { IoIosArrowDown } from "react-icons/io";
 
 const AllTouristsSpot = () => {
   const { loading } = useAuth();
   const loadedTouristsSpot = useLoaderData();
   const [touristsSpot, setTouristsSpot] = useState(loadedTouristsSpot);
-  const handleSortByCost = () => {
-    const sortedSpots = [...touristsSpot].sort(
-      (a, b) => a.averageCost - b.averageCost
-    );
-    setTouristsSpot(sortedSpots);
+  const handleSortByCost = (e) => {
+    const value = e.target.value;
+    if (value == "lowToHighCost") {
+      const sortedSpots = [...touristsSpot].sort(
+        (a, b) => a.averageCost - b.averageCost
+      );
+      setTouristsSpot(sortedSpots);
+    }
   };
 
   if (loading) {
@@ -24,21 +26,18 @@ const AllTouristsSpot = () => {
   }
   return (
     <div>
-      <details className="dropdown text-center ">
-        <summary className="m-1 btn flex items-center bg-green-400 border-0 text-lg text-white ">
-          Sort By <IoIosArrowDown />
-        </summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100  w-40 rounded-xl">
-          <li
-            onClick={handleSortByCost}
-            className="text-base font-semibold rounded-xl text-black bg-white">
-            <a>Average Cost</a>
-          </li>
-        </ul>
-      </details>
-      <h1 className="text-5xl">
-        Here is coming All Tourists Spot: {loadedTouristsSpot.length}
+      <h1 className="text-5xl text-primary-content text-center pt-12">
+        All Tourists Spot
       </h1>
+      <div className="flex justify-center items-center py-12">
+        <select
+          name="sort"
+          className="font-semibold text-xl  px-6 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100  focus:bg-gray-900  focus:border-green-600"
+          onChange={handleSortByCost}>
+          <option value="">Sort By</option>
+          <option value="lowToHighCost">Low Cost to High Cost</option>
+        </select>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {touristsSpot.map((spot) => (
           <TouristsSpotCard
