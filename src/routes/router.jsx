@@ -8,6 +8,7 @@ import AllTouristsSpot from "../pages/AllTouristsSpot/AllTouristsSpot";
 import AddTouristsSpot from "../pages/AddTouristsSpot/AddTouristsSpot";
 import PrivateRoute from "./PrivateRoute";
 import MyList from "../pages/MyList/MyList";
+import TouristsSpotDetails from "../pages/TouristsSpotDetails/TouristsSpotDetails";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/touristsSpot"),
+        loader: () =>
+          fetch(
+            "https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot"
+          ),
       },
       {
         path: "/signIn",
@@ -31,7 +35,14 @@ const router = createBrowserRouter([
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSpot />,
-        loader: () => fetch("http://localhost:5000/touristsSpot"),
+        loader: () =>
+          fetch(
+            "https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot"
+          ),
+      },{
+        path: "/touristsSpotDetails/:id",
+        element: <TouristsSpotDetails/>,
+        loader: ({params}) => fetch(`https://globe-guidance-hub-tourism-management-server.vercel.app/touristSpot/${params?.id}`)
       },
       {
         path: "/addTouristsSpot",
@@ -48,7 +59,10 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
-        loader: (params) => fetch(`http://localhost:5000/touristsSpot/${params.email}`)
+        loader: ({params}) =>
+          fetch(
+            `https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot/${params?.email}`
+          ),
       },
     ],
   },

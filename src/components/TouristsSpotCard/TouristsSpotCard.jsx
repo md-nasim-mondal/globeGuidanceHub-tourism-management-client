@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const TouristsSpotCard = ({ touristSpot }) => {
   const {
+    _id,
     image,
     touristsSpotName,
     averageCost,
@@ -26,7 +28,7 @@ const TouristsSpotCard = ({ touristSpot }) => {
         </div>
         <h3 className="text-2xl">Total Visitors Per Year : {totalVisitorsPerYear} Persons</h3>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary w-full">ViewDetails</button>
+          <Link className="btn btn-primary w-full" to={`/touristsSpotDetails/${_id}`}>ViewDetails</Link>
         </div>
       </div>
     </div>

@@ -36,22 +36,25 @@ const AddTouristsSpot = () => {
     console.log(newSpot);
 
     // send data to the server
-    fetch("http://localhost:5000/touristsSpot", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newSpot),
-    })
+    fetch(
+      "https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newSpot),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Successful",
-            text: "New Coffee Added Successful",
+            text: "Tourists Spot Updated Successful",
             icon: "success",
             showConfirmButton: false,
+            position: "top",
             timer: 1000,
           });
         }
@@ -100,13 +103,6 @@ const AddTouristsSpot = () => {
                   <option value="Vietnam">Vietnam</option>
                   <option value="Cambodia">Cambodia</option>
                 </select>
-                {/* <input
-                  type="text"
-                  name="countryName"
-                  placeholder="Enter Spot Country Name"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
-                  required
-                /> */}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -177,7 +173,7 @@ const AddTouristsSpot = () => {
                 <input
                   type="number"
                   name="averageCost"
-                  placeholder="Enter Spot Average Cost"
+                  placeholder="Enter Spot Average Cost in Dollar"
                   className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
