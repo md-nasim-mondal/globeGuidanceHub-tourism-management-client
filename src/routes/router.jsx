@@ -39,10 +39,18 @@ const router = createBrowserRouter([
           fetch(
             "https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot"
           ),
-      },{
+      },
+      {
         path: "/touristsSpotDetails/:id",
-        element: <TouristsSpotDetails/>,
-        loader: ({params}) => fetch(`https://globe-guidance-hub-tourism-management-server.vercel.app/touristSpot/${params?.id}`)
+        element: (
+          <PrivateRoute>
+            <TouristsSpotDetails />,
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://globe-guidance-hub-tourism-management-server.vercel.app/touristSpot/${params?.id}`
+          ),
       },
       {
         path: "/addTouristsSpot",
@@ -59,7 +67,7 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
-        loader: ({params}) =>
+        loader: ({ params }) =>
           fetch(
             `https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot/${params?.email}`
           ),

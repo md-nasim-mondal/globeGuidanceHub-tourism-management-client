@@ -34,7 +34,6 @@ const MyList = () => {
     event.preventDefault();
 
     const form = event.target;
-    // console.log(form);
 
     const image = form.photo.value;
     const touristsSpotName = form.spotName.value;
@@ -113,7 +112,6 @@ const MyList = () => {
         )
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",

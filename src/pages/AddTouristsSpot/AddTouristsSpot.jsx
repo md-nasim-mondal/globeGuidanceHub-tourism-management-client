@@ -33,8 +33,6 @@ const AddTouristsSpot = () => {
       userName,
       userEmail,
     };
-    console.log(newSpot);
-
     // send data to the server
     fetch(
       "https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpot",
