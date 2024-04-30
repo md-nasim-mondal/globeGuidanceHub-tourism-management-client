@@ -20,6 +20,12 @@ const SignUp = () => {
     const email = form.get("email");
     const password = form.get("password");
     const accepted = e.target.terms.checked;
+    const newUser = {
+      name,
+      photo,
+      email,
+      password,
+    };
     if (password.length < 6) {
       return toast.error("Password length should be minimum 6 digit");
     }
@@ -43,13 +49,29 @@ const SignUp = () => {
           photoURL: `${photo}`,
         })
           .then(() => {
-            Swal.fire({
-              text: "Successfully Registered Now Please Login!!",
-              icon: "success",
-              showConfirmButton: false,
-              position: "top",
-              timer: 1500,
-            });
+            fetch(
+              "https://globe-guidance-hub-tourism-management-server.vercel.app/users",
+              {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(newUser),
+              }
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  Swal.fire({
+                    text: "Successfully Sign Up Now Please Login Now!!",
+                    icon: "success",
+                    showConfirmButton: false,
+                    position: "top",
+                    timer: 1500,
+                  });
+                }
+              });
+            
             navigate(location?.state ? location.state : "/signIn");
           })
           .catch((error) => {
@@ -59,6 +81,9 @@ const SignUp = () => {
         setUser(null);
       })
       .catch((error) => toast.error(error.message));
+
+      // send data to server side 
+      
   };
   return (
     <div>
