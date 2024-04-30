@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-// import logo from '../../../assets/logo/logo22.png'
+import logo from '../../../assets/logo22.svg'
 const Footer = () => {
     return (
         <div className="bg-base-200">
             <footer className="footer container mx-auto py-20 bg-base-200 text-base-content justify-center lg:justify-between">
                 <aside>
-                    {/* <img className='w-20 md:w-32' src={logo} alt="" /> */}
+                    <img className='w-20 md:w-32' src={logo} alt="" />
                     <p>
                         <span className='md:text-xl'>GlobeGuidanceHub Company Ltd.</span>
                         <br />
