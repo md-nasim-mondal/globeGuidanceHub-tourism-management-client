@@ -1,16 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../../providers/Auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TouristsSpotCard from "../../components/TouristsSpotCard/TouristsSpotCard";
 import Sliders from "../../components/Sliders/Sliders";
+import Country from "../Country/Country";
 
 const Home = () => {
   const loadedTouristsSpot = useLoaderData();
   // eslint-disable-next-line no-unused-vars
   const [displayTouristsSpot, setDisplayTouristsSpot] =
     useState(loadedTouristsSpot);
+  const [countries, setCountries] = useState([]);
 
   const { loading } = useAuth();
+
+  useEffect(()=> {
+    fetch('https://globe-guidance-hub-tourism-management-server.vercel.app/countries').then(res => res.json())
+    .then(data =>{ 
+      setCountries(data)})
+  }, [])
 
   if (loading) {
     return (
@@ -93,6 +101,12 @@ const Home = () => {
             heritage, breathtaking landscapes, and practical travel information
             to help you plan your next international adventure.
           </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* <Countries></Countries> */}
+          {
+            countries.slice(0, 6).map(country => <Country key={country._id} country={country}></Country>)
+          }
         </div>
       </section>
 
