@@ -68,21 +68,57 @@ const Home = () => {
             experiences, and culinary delights worldwide.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                src="https://i.postimg.cc/XvSM0v0H/rangamati.jpg"
                 alt="Shoes"
                 className="rounded-xl"
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+              <h2 className="card-title">Rangamati, Bangladesh</h2>
+              <p> Rangamati, nestled in the Chittagong Hill Tracts region of Bangladesh, captivates visitors with its picturesque landscape.</p>
+            </div>
+          </div>
+          <div className="card bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+              <img
+                src="https://i.postimg.cc/1t1yMHtz/hoChiMin.jpg"
+                alt="Shoes"
+                className="rounded-xl"
+              />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title">Ho Chi Minh City, Vietnam</h2>
+              <p>  Ho Chi Minh City, formerly known as Saigon, is Vietnam&apos;s largest city and a vibrant hub of culture, history, and commerce.</p>
+            </div>
+          </div>
+          <div className="card bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+              <img
+                src="https://i.postimg.cc/XvSM0v0H/rangamati.jpg"
+                alt="Shoes"
+                className="rounded-xl"
+              />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title">Bangkok, Thailand</h2>
+              <p>Bangkok, the vibrant capital of Thailand, is a bustling metropolis known for its ornate temples, bustling street markets, and vibrant nightlife. </p>
+            </div>
+          </div>
+          <div className="card bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+              <img
+                src="https://i.postimg.cc/XvSM0v0H/rangamati.jpg"
+                alt="Shoes"
+                className="rounded-xl"
+              />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title"> Langkawi, Malaysia</h2>
+              <p> Langkawi, an archipelago of 99 islands off the northwest coast of Malaysia, is known for its stunning beaches, lush rainforests, and duty-free shopping. </p>
             </div>
           </div>
         </div>
@@ -90,12 +126,12 @@ const Home = () => {
 
       {/* Country Section */}
 
-      <section>
-        <div className="pb-12">
+      <section className="py-28">
+        <div>
           <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
             Countries
           </h1>
-          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content pb-12">
             Explore diverse destinations around the globe with
             GlobeGuidanceHub&apos;s Country Section. Discover rich cultural
             heritage, breathtaking landscapes, and practical travel information
@@ -130,7 +166,7 @@ const Home = () => {
                 <div className="flex items-center gap-6">
                   <div className="avatar">
                     <div className="w-16 rounded-full">
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src="https://i.postimg.cc/XJ4TpDq9/bandarban.jpg" />
                     </div>
                   </div>
                   <div>
@@ -141,33 +177,33 @@ const Home = () => {
                 <div className="flex items-center gap-6">
                   <div className="avatar">
                     <div className="w-16 rounded-full">
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src="https://i.postimg.cc/NFJqh7gm/komodo-National-Park.jpg" alt="" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Bangladesh</h3>
+                    <h3 className="text-3xl">Malaysia</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="avatar">
                     <div className="w-16 rounded-full">
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src="https://i.postimg.cc/1t1yMHtz/hoChiMin.jpg" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Bangladesh</h3>
+                    <h3 className="text-3xl">Vietnam</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="avatar">
                     <div className="w-16 rounded-full">
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src="https://i.postimg.cc/yYLYBcff/kep.jpg" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Bangladesh</h3>
+                    <h3 className="text-3xl">Cambodia</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>

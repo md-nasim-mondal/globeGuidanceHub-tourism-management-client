@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Sliders = () => {
     return (
@@ -38,20 +39,14 @@ const Sliders = () => {
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
                                 <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
-                                    Welcome to DreamDwellings: Where Your Home
-                                    Dreams Come True!
+                                Discover Your Next Adventure: Explore Our Top Destinations!
                                 </h1>
-                                <p className="mb-5 font-medium text-white animate__animated animate_bounceInLeft">
-                                    Embark on a journey to turn your home dreams
-                                    into reality with DreamDwellings. Explore
-                                    our exquisite collection of residences
-                                    designed to fulfill every aspiration and
-                                    desire. Welcome home to the place where
-                                    dreams find their address.
+                                <p className="mb-5 font-medium text-white ">
+                                Immerse yourself in a world of breathtaking landscapes and vibrant cultures. Let our expertly curated selection of top destinations ignite your wanderlust and inspire your next unforgettable journey.
                                 </p>
-                                <button className="btn btn-ghost btn-outline text-white text-lg font-bold ">
-                                    Explore Now
-                                </button>
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                    See Our All Tourists Spot
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -66,19 +61,14 @@ const Sliders = () => {
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
                                 <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
-                                    Discover Your Perfect Haven: Explore
-                                    DreamDwellings Today!
+                                Unlock Hidden Gems: Off-the-Beaten-Path Escapes Await!
                                 </h1>
-                                <p className="mb-5 font-medium text-white animate__animated animate_bounceInLeft">
-                                    Discover the haven you&apos;ve been longing
-                                    for with DreamDwellings. Explore our diverse
-                                    range of homes crafted to perfection. Your
-                                    perfect sanctuary awaits - start your
-                                    exploration today!
+                                <p className="mb-5 font-medium text-white ">
+                                Venture beyond the ordinary and uncover the extraordinary. Embark on a journey of discovery as you explore hidden gems, secluded retreats, and secret paradises that promise unforgettable experiences and cherished memories.
                                 </p>
-                                <button className="btn btn-ghost btn-outline text-white text-lg font-bold ">
-                                    Explore Now
-                                </button>
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                    See Our All Tourists Spot
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -93,19 +83,14 @@ const Sliders = () => {
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
                                 <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
-                                    Unlock the Door to Your Dream Home:
-                                    DreamDwellings Welcomes You!
+                                Plan Your Perfect Getaway: Tailored Travel Experiences Await!
                                 </h1>
-                                <p className="mb-5 font-medium text-white animate__animated animate_bounceInLeft">
-                                    Ready to unlock the door to your dream home?
-                                    DreamDwellings extends a warm welcome.
-                                    Experience the joy of finding your perfect
-                                    abode among our stunning collection. Your
-                                    dream home is just a step away.
+                                <p className="mb-5 font-medium text-white ">
+                                From luxurious resorts to adventurous expeditions, tailor your dream vacation with our personalized travel experiences. Whether you seek relaxation, adventure, or cultural immersion, we&apos;re here to make your travel dreams a reality.
                                 </p>
-                                <button className="btn btn-ghost btn-outline text-white text-lg font-bold ">
-                                    Explore Now
-                                </button>
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                    See Our All Tourists Spot
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -120,19 +105,14 @@ const Sliders = () => {
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
                                 <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
-                                    Step into Serenity: DreamDwellings - Your
-                                    Gateway to Home Bliss!
+                                Experience the Extraordinary: Dive into Unique Cultural Encounters!
                                 </h1>
-                                <p className="mb-5 font-medium text-white animate__animated animate_bounceInLeft">
-                                    Step into a realm of serenity with
-                                    DreamDwellings. Our homes are your gateway
-                                    to blissful living, offering peace, comfort,
-                                    and unparalleled beauty. Welcome to your new
-                                    haven of tranquility
+                                <p className="mb-5 font-medium text-white ">
+                                Immerse yourself in the rich tapestry of global cultures and traditions. From culinary delights to ancient rituals, embark on a transformative journey filled with authentic experiences that celebrate the diversity of our world.
                                 </p>
-                                <button className="btn btn-ghost btn-outline text-white text-lg font-bold ">
-                                    Explore Now
-                                </button>
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                    See Our All Tourists Spot
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -147,19 +127,14 @@ const Sliders = () => {
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
                                 <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
-                                    Embrace Luxury Living: DreamDwellings
-                                    Presents Your Dream Abode!
+                                Go Beyond the Ordinary: Elevate Your Travel Experience!
                                 </h1>
-                                <p className="mb-5 font-medium text-white animate__animated animate_bounceInLeft">
-                                    Embrace the epitome of luxury living with
-                                    DreamDwellings. Indulge in the finest
-                                    residences meticulously crafted for your
-                                    comfort and pleasure. Your dream abode
-                                    awaits your gracious presence.
+                                <p className="mb-5 font-medium text-white ">
+                                Break free from the ordinary and elevate your travel experience to new heights. Whether you crave adrenaline-pumping adventures or serene retreats, let us guide you towards extraordinary moments that redefine the art of travel.
                                 </p>
-                                <button className="btn btn-ghost btn-outline text-white text-lg font-bold ">
-                                    Explore Now
-                                </button>
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                    See Our All Tourists Spot
+                                </Link>
                             </div>
                         </div>
                     </div>
