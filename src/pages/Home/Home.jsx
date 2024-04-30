@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../providers/Auth";
 import { useState } from "react";
 import TouristsSpotCard from "../../components/TouristsSpotCard/TouristsSpotCard";
+import Sliders from "../../components/Sliders/Sliders";
 
 const Home = () => {
   const loadedTouristsSpot = useLoaderData();
@@ -20,13 +21,17 @@ const Home = () => {
   }
   return (
     <div>
+    {/* Banner Section */}
+    <section>
+      <Sliders/>
+    </section>
       {/* Tourists Spot Section */}
       <section>
         <div className="pt-28">
-          <h1 className="text-5xl text-base-content text-center pb-8 font-bold">
+          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
             Tourists Spot
           </h1>
-          <p className="text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
             Embark on a journey of discovery with GlobeGuidanceHub&apos;s
             Tourist Spot section. Dive into a world of iconic landmarks, hidden
             gems, and must-see attractions, curated to inspire your next
@@ -45,18 +50,18 @@ const Home = () => {
 
       <section>
         <div className="pb-12">
-          <h1 className="text-5xl text-base-content text-center pb-8 font-bold">
+          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
             Top Traveling Destination
           </h1>
-          <p className="text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
             Discover iconic landmarks, tropical paradises, vibrant cities, and
             ancient wonders with GlobeGuidanceHub&apos;s Top Traveling
             Destinations. Lose yourself in breathtaking landscapes, cultural
             experiences, and culinary delights worldwide.
           </p>
         </div>
-        <div>
-          <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
                 src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
@@ -79,10 +84,10 @@ const Home = () => {
 
       <section>
         <div className="pb-12">
-          <h1 className="text-5xl text-base-content text-center pb-8 font-bold">
+          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
             Countries
           </h1>
-          <p className="text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
             Explore diverse destinations around the globe with
             GlobeGuidanceHub&apos;s Country Section. Discover rich cultural
             heritage, breathtaking landscapes, and practical travel information
@@ -94,13 +99,13 @@ const Home = () => {
       {/* Popular Tourism Country Section */}
       <section>
         <div className="hero mb-28 bg-base-200 bg-opacity-20 py-12 rounded-3xl">
-          <div className="hero-content flex-col lg:flex-row-reverse gap-8 xl:gap-12">
+          <div className="hero-content p-0 md:p-4 flex-col lg:flex-row-reverse gap-8 xl:gap-12">
             <div className="text-center lg:text-left">
               <div>
-                <h1 className="text-5xl font-bold">
+                <h1 className="text-3xl md:text-5xl font-bold">
                   Popular Tourism Countries
                 </h1>
-                <p className="py-6 text-lg text-center  mx-auto text-base-content">
+                <p className="py-6 md:text-lg text-center break-words mx-auto text-base-content">
                   Explore the world&apos;s most sought-after tourist
                   destinations on GlobeGuidanceHub. From bustling cities to
                   serene beaches, discover iconic landmarks, cultural treasures,
@@ -154,7 +159,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
+            <div className="card shrink-0 w-full max-w-xs md:max-w-xl shadow-2xl bg-base-100">
               <h1 className="text-2xl text-base-content text-center pt-12 px-6 font-semibold">
                 Subscribe For Getting Our Latest Update News
               </h1>

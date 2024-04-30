@@ -75,7 +75,7 @@ const Navbar = () => {
           All Tourists Spot
         </NavLink>
       </li>
-      {user && (
+      {user ?  (
         <>
           <li>
             <NavLink
@@ -101,12 +101,33 @@ const Navbar = () => {
               My List
             </NavLink>
           </li>
+          <li className={`${user ? "2xl:hidden" : "lg:hidden"}`}>
+          <button
+              onClick={() => {
+                setOpen(false);
+                handleSignOut();
+              }}
+              className="btn text-lg font-semibold rounded-lg text-red-400">
+              SignOut
+            </button>
+          </li>
         </>
-      )}
+      ): (<>
+        <NavLink
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                !isActive
+                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
+                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
+              }
+              to={"/signIn"}>
+              <button>Sign In</button>
+            </NavLink>
+      </>)}
     </>
   );
   return (
-    <div className="navbar bg-base-100 dark:bg-white rounded-2xl">
+    <div className="navbar bg-base-100 dark:bg-white rounded-bl-lg rounded-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -117,19 +138,19 @@ const Navbar = () => {
             ${user ? "2xl:hidden" : "lg:hidden"}
                             `}>
             {open ? (
-              <IoClose className="text-2xl" />
+              <IoClose className="text-2xl text-primary-content" />
             ) : (
-              <IoMenu className="text-2xl" />
+              <IoMenu className="text-2xl text-primary-content" />
             )}
           </div>
           <ul
             tabIndex={0}
             //  dropdown-content
             className={`menu menu-sm
-                             absolute mt-3 z-[50] p-2 shadow 
+                             absolute mt-5 z-[50] p-2 shadow 
              ${user ? "2xl:hidden" : "lg:hidden"}
                             ${open ? "" : "hidden"}
-                             bg-base-100 rounded-box w-52`}>
+                             bg-base-100 dark:bg-lime-100 rounded-b-xl w-52`}>
             {navLinks}
           </ul>
         </div>
@@ -171,6 +192,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <div className={`hidden ${user ? "2xl:flex" : "lg:flex"}`}>
             <button
               onClick={() => {
                 setOpen(false);
@@ -179,9 +201,10 @@ const Navbar = () => {
               className="btn btn-sm md:btn-md ml-0.5 md:ml-4 text-lg font-semibold btn-outline bg-none border-solid border border-[#23BE0A] rounded-lg text-[#23BE0A]">
               SignOut
             </button>
+            </div>
           </div>
         ) : (
-          <div className="flex flex-col md:flex-row gap-2">
+          <div className= {`hidden ${user ? "2xl:flex" : "lg:flex"} flex-col md:flex-row gap-2`} >
             <NavLink
               onClick={() => setOpen(false)}
               className={({ isActive }) =>

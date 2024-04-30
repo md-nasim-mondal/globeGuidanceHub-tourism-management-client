@@ -1,13 +1,9 @@
-import slide1 from "../../assets/railing-4525845_1920.jpg";
-import slide2 from "../../assets/houses-336436_1920.jpg";
-import slide3 from "../../assets/new-home-1540871_1920.jpg";
-import slide4 from "../../assets/residential-area-3454940_1920.jpg";
-import slide5 from "../../assets/villa-7130748_1920.jpg";
+import slide1 from "../../assets/sliderImg/img1.jpg";
+import slide2 from "../../assets/sliderImg/img2.jpg";
+import slide3 from "../../assets/sliderImg/img3.jpg";
+import slide4 from "../../assets/sliderImg/img4.jpg";
+import slide5 from "../../assets/sliderImg/img5.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "animate.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,7 +37,7 @@ const Sliders = () => {
                         <div className="hero-overlay rounded-xl md:rounded-3xl"></div>
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
-                                <h1 className="mb-5 animate__animated animate_backInDown text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
+                                <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
                                     Welcome to DreamDwellings: Where Your Home
                                     Dreams Come True!
                                 </h1>
@@ -69,7 +65,7 @@ const Sliders = () => {
                         <div className="hero-overlay rounded-xl md:rounded-3xl"></div>
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
-                                <h1 className="mb-5 animate__animated animate_backInDown text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
+                                <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
                                     Discover Your Perfect Haven: Explore
                                     DreamDwellings Today!
                                 </h1>
@@ -96,7 +92,7 @@ const Sliders = () => {
                         <div className="hero-overlay rounded-xl md:rounded-3xl"></div>
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
-                                <h1 className="mb-5 animate__animated animate_backInDown text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
+                                <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
                                     Unlock the Door to Your Dream Home:
                                     DreamDwellings Welcomes You!
                                 </h1>
@@ -123,7 +119,7 @@ const Sliders = () => {
                         <div className="hero-overlay rounded-xl md:rounded-3xl"></div>
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
-                                <h1 className="mb-5 animate__animated animate_backInDown text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
+                                <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
                                     Step into Serenity: DreamDwellings - Your
                                     Gateway to Home Bliss!
                                 </h1>
@@ -150,7 +146,7 @@ const Sliders = () => {
                         <div className="hero-overlay rounded-xl md:rounded-3xl"></div>
                         <div className="hero-content text-center text-neutral-content ">
                             <div>
-                                <h1 className="mb-5 animate__animated animate_backInDown text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
+                                <h1 className="mb-5  text-white text-3xl md:text-4xl lg:text-6xl font-bold md:leading-[40px]  lg:leading-[76px]">
                                     Embrace Luxury Living: DreamDwellings
                                     Presents Your Dream Abode!
                                 </h1>
