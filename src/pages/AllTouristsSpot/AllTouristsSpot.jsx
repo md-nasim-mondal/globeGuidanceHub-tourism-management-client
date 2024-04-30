@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../providers/Auth";
 import { useState } from "react";
 import TouristsSpotCard from "../../components/TouristsSpotCard/TouristsSpotCard";
+import { Typewriter } from "react-simple-typewriter";
 
 const AllTouristsSpot = () => {
   const { loading } = useAuth();
@@ -26,6 +27,18 @@ const AllTouristsSpot = () => {
   }
   return (
     <div className="min-h-[80vh] pt-12 pb-28">
+      <div className="flex justify-center text-green-500 items-center my-12 text-[42px] ">
+        <Typewriter
+          words={["All ", "Tourists Spot", "Is Here"]}
+          loop={true}
+          cursor
+          cursorStyle="~"
+          typeSpeed={170}
+          deleteSpeed={80}
+          delaySpeed={1200}
+          style={{ fontSize: "24px" }}
+        />
+      </div>
       <div>
         <h1 className="text-5xl text-base-content text-center pt-12 pb-8 font-bold">
           Our All Tourists Spot
