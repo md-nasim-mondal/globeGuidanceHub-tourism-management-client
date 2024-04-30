@@ -25,10 +25,18 @@ const AllTouristsSpot = () => {
     );
   }
   return (
-    <div>
-      <h1 className="text-5xl text-base-content text-center pt-12">
-       Our All Tourists Spot
-      </h1>
+    <div className="min-h-[80vh] pt-12 pb-28">
+      <div>
+        <h1 className="text-5xl text-base-content text-center pt-12 pb-8 font-bold">
+          Our All Tourists Spot
+        </h1>
+        <p className="text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          Discover a world of wonders with GlobeGuidanceHub&apos;s All Tourist
+          Spots section. From iconic landmarks to hidden gems, explore a curated
+          collection of must-see destinations that will inspire your wanderlust
+          and fuel your travel dreams.
+        </p>
+      </div>
       <div className="flex justify-center items-center py-12">
         <select
           name="sort"

@@ -61,13 +61,21 @@ const AddTouristsSpot = () => {
   return (
     <div>
       <div className="container mx-auto mt-12 min-h-[80vh] pt-14 pb-28">
-        <div className="text-center px-10 py-7 lg:px-28 lg:py-16 bg-base-content lg:w-3/4 rounded-md mx-auto">
-          <h2 className="text-5xl pb-6 font-extrabold text-primary-content ">
-            Add a New Tourists Spot
-          </h2>
+        <div className="text-center px-6 md:px-10 py-8 lg:px-28 lg:py-16 bg-base-content lg:w-3/4 rounded-md mx-auto">
+          <div>
+            <h2 className="text-5xl pb-6 font-extrabold text-primary-content ">
+              Add a New Tourists Spot
+            </h2>
+            <p className="text-lg text-center md:w-[90%] mx-auto text-primary-content pb-12">
+              Share your favorite travel destinations with GlobeGuidanceHub&apos;s
+              Tourist Spot Form. Contribute to our growing collection of
+              must-see places, inspiring fellow travelers to explore new
+              horizons and create unforgettable memories.
+            </p>
+          </div>
           <form
             onSubmit={handleAddSpot}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto">
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
             <div>
               <div className="form-control">
                 <label className="label">
