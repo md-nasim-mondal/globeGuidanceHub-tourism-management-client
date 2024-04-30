@@ -60,9 +60,9 @@ const AddTouristsSpot = () => {
   };
   return (
     <div>
-      <div className="container mx-auto mt-12">
-        <div className="text-center px-10 py-7 lg:px-28 lg:py-16 bg-[#F4F3F0] lg:w-3/4 rounded-md mx-auto">
-          <h2 className="text-5xl pb-6 font-extrabold text-black">
+      <div className="container mx-auto mt-12 min-h-[80vh] pt-14 pb-28">
+        <div className="text-center px-10 py-7 lg:px-28 lg:py-16 bg-base-content lg:w-3/4 rounded-md mx-auto">
+          <h2 className="text-5xl pb-6 font-extrabold text-primary-content ">
             Add a New Tourists Spot
           </h2>
           <form
@@ -71,7 +71,7 @@ const AddTouristsSpot = () => {
             <div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Tourists Spot Name
                   </span>
                 </label>
@@ -79,20 +79,20 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="spotName"
                   placeholder="Enter Tourists Spot Name"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Country Name
                   </span>
                 </label>
                 <select
                   name="country"
                   id="country"
-                  className="font-semibold text-xl w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600">
+                  className="font-semibold text-xl w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600">
                   <option>Select Country</option>
                   <option value="Bangladesh">Bangladesh</option>
                   <option value="Indonesia">Indonesia</option>
@@ -104,7 +104,7 @@ const AddTouristsSpot = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Location
                   </span>
                 </label>
@@ -112,13 +112,13 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="location"
                   placeholder="Enter spot location"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Travel Time
                   </span>
                 </label>
@@ -126,13 +126,13 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="travelTime"
                   placeholder="Enter travel_time => like- 7 days"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     User Name
                   </span>
                 </label>
@@ -142,7 +142,7 @@ const AddTouristsSpot = () => {
                   placeholder={user?.displayName}
                   value={user?.displayName}
                   readOnly
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -150,7 +150,7 @@ const AddTouristsSpot = () => {
             <div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Photo URL
                   </span>
                 </label>
@@ -158,13 +158,13 @@ const AddTouristsSpot = () => {
                   type="url"
                   name="photo"
                   placeholder="Enter Spot Photo URL"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Average Cost
                   </span>
                 </label>
@@ -172,13 +172,13 @@ const AddTouristsSpot = () => {
                   type="number"
                   name="averageCost"
                   placeholder="Enter Spot Average Cost in Dollar"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Seasonality
                   </span>
                 </label>
@@ -186,13 +186,13 @@ const AddTouristsSpot = () => {
                   type="text"
                   name="seasonality"
                   placeholder="Enter seasonality - like summer, winter"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Total Visitors Per Year
                   </span>
                 </label>
@@ -200,13 +200,13 @@ const AddTouristsSpot = () => {
                   type="number"
                   name="totalVisitors"
                   placeholder="Enter totalVisitorsPerYear => like- 10000"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text  font-semibold text-lg text-black">
+                  <span className="label-text  font-semibold text-lg text-primary-content">
                     User Email
                   </span>
                 </label>
@@ -216,7 +216,7 @@ const AddTouristsSpot = () => {
                   placeholder="Please Enter Your Email by which Email You Signed In"
                   value={user?.email}
                   readOnly
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
                   required
                 />
               </div>
@@ -224,19 +224,19 @@ const AddTouristsSpot = () => {
             <div className="md:col-span-2 space-y-6">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-lg text-black">
+                  <span className="label-text font-semibold text-lg text-primary-content">
                     Short Description
                   </span>
                 </label>
                 <textarea
                   name="description"
                   id="description"
-                  className="w-full px-4 py-3 md:min-h-32 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"></textarea>
+                  className="w-full px-4 py-3 md:min-h-32 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"></textarea>
               </div>
               <input
                 type="submit"
                 value="Add Tourists Spot"
-                className="btn w-full bg-[#D2B48C] border-2 rounded-md border-[#331A15] text-black"
+                className="btn w-full bg-[#D2B48C] border-2 rounded-md border-[#331A15] text-primary-content"
               />
             </div>
           </form>

@@ -26,8 +26,8 @@ const AllTouristsSpot = () => {
   }
   return (
     <div>
-      <h1 className="text-5xl text-primary-content text-center pt-12">
-        All Tourists Spot
+      <h1 className="text-5xl text-base-content text-center pt-12">
+       Our All Tourists Spot
       </h1>
       <div className="flex justify-center items-center py-12">
         <select

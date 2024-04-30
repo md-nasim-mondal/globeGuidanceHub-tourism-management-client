@@ -6,7 +6,7 @@ import { Dialog, Transition } from "@headlessui/react";
 const MyList = () => {
   const [myTouristsSpot, setMyTouristsSpot] = useState([]);
   const [touristSpot, setTouristSpot] = useState(null);
-  const { user } = useAuth() || {};
+  const { user, loading } = useAuth() || {};
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
@@ -26,10 +26,6 @@ const MyList = () => {
         setMyTouristsSpot(data);
       });
   }, [user, myTouristsSpot]);
-
-  // const openModal = () => {
-  //   document.getElementById("my_modal_4").showModal();
-  // };
   const handleUpdateTouristsSpot = (event) => {
     event.preventDefault();
 
@@ -127,29 +123,47 @@ const MyList = () => {
       }
     });
   };
+  if (loading) {
+    return (
+      <div className=" flex mt-16 justify-center">
+        <span className="loading loading-infinity loading-lg"></span>
+      </div>
+    );
+  }
+  if(myTouristsSpot.length <= 0){
+    return(
+      <div className="pt-14 pb-28 md:min-h-[80vh] lg:flex flex-col items-center justify-center">
+         <h2 className="text-4xl text-base-content text-center py-8">
+        Your Added Tourists Spot List
+      </h2>
+      <h3 className="text-3xl text-base-content text-center py-8">You haven&apos;t Added Any Tourists Spot Yet</h3>
+      </div>
+    )
+  }
+ if(myTouristsSpot.length > 0){
   return (
-    <div>
-      <h2 className="text-4xl text-primary-content text-center py-8">
-        My Added Tourists Spot List
+    <div className="pt-14 pb-28 md:min-h-[80vh] lg:flex flex-col items-center justify-center">
+      <h2 className="text-4xl text-base-content text-center py-8">
+        Your Added Tourists Spot List
       </h2>
       <div className="overflow-x-auto lg:w-3/4 mx-auto">
-        <table className="table mx-auto">
+        <table className="table mx-auto border-4 overflow-x-auto">
           <thead>
             <tr>
-              <th className="text-primary-content md:text-lg lg:text-xl"></th>
-              <th className="text-primary-content md:text-lg lg:text-xl">
+              <th className="text-base-content md:text-lg lg:text-xl"></th>
+              <th className="text-base-content md:text-lg lg:text-xl">
                 Tourists Spot Name
               </th>
-              <th className="text-primary-content md:text-lg lg:text-xl">
+              <th className="text-base-content md:text-lg lg:text-xl">
                 Country
               </th>
-              <th className="text-primary-content md:text-lg lg:text-xl">
+              <th className="text-base-content md:text-lg lg:text-xl">
                 Seasonality
               </th>
-              <th className="text-primary-content md:text-lg lg:text-xl">
+              <th className="text-base-content md:text-lg lg:text-xl">
                 Travel Time
               </th>
-              <th className="text-primary-content md:text-lg lg:text-xl pl-10">
+              <th className="text-base-content md:text-lg lg:text-xl flex justify-center">
                 Action
               </th>
             </tr>
@@ -157,25 +171,25 @@ const MyList = () => {
           <tbody>
             {myTouristsSpot.map((spot, idx) => (
               <tr key={spot._id}>
-                <th className="text-primary-content md:text-lg lg:text-xl">
+                <th className="text-base-content md:text-lg lg:text-xl">
                   {idx + 1}
                 </th>
-                <td className="text-primary-content md:text-lg">
+                <td className="text-base-content md:text-lg">
                   {spot.touristsSpotName}
                 </td>
-                <td className="text-primary-content md:text-lg">
+                <td className="text-base-content md:text-lg">
                   {spot.countryName}
                 </td>
-                <td className="text-primary-content md:text-lg">
+                <td className="text-base-content md:text-lg">
                   {spot.seasonality}
                 </td>
-                <td className="text-primary-content md:text-lg">
+                <td className="text-base-content md:text-lg">
                   {spot.travelTime}
                 </td>
                 <td>
-                  <div className="join join-horizontal">
+                  <div className="flex gap-4 justify-center">
                     <button
-                      className="pr-4 btn-link"
+                      className="btn btn-outline btn-info"
                       onClick={() => {
                         openModal();
                         setTouristSpot(spot);
@@ -219,19 +233,21 @@ const MyList = () => {
                 leaveTo="opacity-0 scale-95">
                 <Dialog.Panel className="w-full max-w-7xl transform overflow-y-auto rounded-2xl bg-base-content p-6 text-left align-middle shadow-xl transition-all">
                   <div className="md:p-8">
-                  <div className="text-end">
-                    <button onClick={closeModal} className="btn">Cancel Edit</button>
-                  </div>
-                  <h1 className="text-4xl text-primary-content font-bold text-center py-12">
-                    Update Your Tourists Spot Information
-                  </h1>
+                    <div className="text-end">
+                      <button onClick={closeModal} className="btn">
+                        Cancel Edit
+                      </button>
+                    </div>
+                    <h1 className="text-4xl text-primary-content font-bold text-center py-12">
+                      Update Your Tourists Spot Information
+                    </h1>
                     <form
                       onSubmit={handleUpdateTouristsSpot}
                       className="grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto md:items-center">
                       <div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Tourists Spot Name
                             </span>
                           </label>
@@ -246,7 +262,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Country Name
                             </span>
                           </label>
@@ -267,7 +283,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Location
                             </span>
                           </label>
@@ -282,7 +298,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Travel Time
                             </span>
                           </label>
@@ -299,7 +315,7 @@ const MyList = () => {
                       <div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Photo URL
                             </span>
                           </label>
@@ -314,7 +330,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Average Cost
                             </span>
                           </label>
@@ -329,7 +345,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Seasonality
                             </span>
                           </label>
@@ -344,7 +360,7 @@ const MyList = () => {
                         </div>
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Total Visitors Per Year
                             </span>
                           </label>
@@ -361,7 +377,7 @@ const MyList = () => {
                       <div className="md:col-span-2 space-y-6">
                         <div className="form-control">
                           <label className="label">
-                            <span className="label-text font-semibold text-lg text-primary-content">
+                            <span className="label-text font-semibold text-lg text-base-content">
                               Short Description
                             </span>
                           </label>
@@ -387,6 +403,7 @@ const MyList = () => {
       </Transition>
     </div>
   );
+ }
 };
 
 export default MyList;
