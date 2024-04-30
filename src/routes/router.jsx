@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyList from "../pages/MyList/MyList";
 import TouristsSpotDetails from "../pages/TouristsSpotDetails/TouristsSpotDetails";
 import CountrySpots from "../pages/Countries/CountrySpots";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
         path: "/countries/:countryName",
         element: <CountrySpots/>,
         loader: ({params}) => fetch(`https://globe-guidance-hub-tourism-management-server.vercel.app/touristsSpotByCountries/${params.countryName}`) 
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       }
     ],
   },

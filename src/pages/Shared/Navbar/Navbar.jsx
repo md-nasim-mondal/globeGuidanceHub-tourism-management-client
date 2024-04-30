@@ -127,7 +127,20 @@ const Navbar = () => {
             </NavLink>
           </li>
         </>
+        
       )}
+      <li>
+        <NavLink
+          onClick={() => setOpen(false)}
+          className={({ isActive }) =>
+            !isActive
+              ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
+              : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
+          }
+          to="/contact">
+          Contact Us
+        </NavLink>
+      </li>
     </>
   );
   return (

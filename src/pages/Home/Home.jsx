@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import useAuth from "../../providers/Auth";
 import { useEffect, useState } from "react";
 import TouristsSpotCard from "../../components/TouristsSpotCard/TouristsSpotCard";
@@ -14,11 +14,15 @@ const Home = () => {
 
   const { loading } = useAuth();
 
-  useEffect(()=> {
-    fetch('https://globe-guidance-hub-tourism-management-server.vercel.app/countries').then(res => res.json())
-    .then(data =>{ 
-      setCountries(data)})
-  }, [])
+  useEffect(() => {
+    fetch(
+      "https://globe-guidance-hub-tourism-management-server.vercel.app/countries"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setCountries(data);
+      });
+  }, []);
 
   if (loading) {
     return (
@@ -29,10 +33,17 @@ const Home = () => {
   }
   return (
     <div>
-    {/* Banner Section */}
-    <section>
-      <Sliders/>
-    </section>
+      {/* Banner Section */}
+      <section>
+        <Sliders />
+        <div className="text-center mt-12">
+          <Link
+            className="btn bg-green-500 border-none"
+            to={"/allTouristsSpot"}>
+            See All Tourists Spot
+          </Link>
+        </div>
+      </section>
       {/* Tourists Spot Section */}
       <section>
         <div className="pt-28">
@@ -79,7 +90,11 @@ const Home = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title">Rangamati, Bangladesh</h2>
-              <p> Rangamati, nestled in the Chittagong Hill Tracts region of Bangladesh, captivates visitors with its picturesque landscape.</p>
+              <p>
+                {" "}
+                Rangamati, nestled in the Chittagong Hill Tracts region of
+                Bangladesh, captivates visitors with its picturesque landscape.
+              </p>
             </div>
           </div>
           <div className="card bg-base-100 shadow-xl">
@@ -92,7 +107,12 @@ const Home = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title">Ho Chi Minh City, Vietnam</h2>
-              <p>  Ho Chi Minh City, formerly known as Saigon, is Vietnam&apos;s largest city and a vibrant hub of culture, history, and commerce.</p>
+              <p>
+                {" "}
+                Ho Chi Minh City, formerly known as Saigon, is Vietnam&apos;s
+                largest city and a vibrant hub of culture, history, and
+                commerce.
+              </p>
             </div>
           </div>
           <div className="card bg-base-100 shadow-xl">
@@ -105,7 +125,11 @@ const Home = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title">Bangkok, Thailand</h2>
-              <p>Bangkok, the vibrant capital of Thailand, is a bustling metropolis known for its ornate temples, bustling street markets, and vibrant nightlife. </p>
+              <p>
+                Bangkok, the vibrant capital of Thailand, is a bustling
+                metropolis known for its ornate temples, bustling street
+                markets, and vibrant nightlife.{" "}
+              </p>
             </div>
           </div>
           <div className="card bg-base-100 shadow-xl">
@@ -118,7 +142,12 @@ const Home = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title"> Langkawi, Malaysia</h2>
-              <p> Langkawi, an archipelago of 99 islands off the northwest coast of Malaysia, is known for its stunning beaches, lush rainforests, and duty-free shopping. </p>
+              <p>
+                {" "}
+                Langkawi, an archipelago of 99 islands off the northwest coast
+                of Malaysia, is known for its stunning beaches, lush
+                rainforests, and duty-free shopping.{" "}
+              </p>
             </div>
           </div>
         </div>
@@ -140,9 +169,9 @@ const Home = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* <Countries></Countries> */}
-          {
-            countries.slice(0, 6).map(country => <Country key={country._id} country={country}></Country>)
-          }
+          {countries.slice(0, 6).map((country) => (
+            <Country key={country._id} country={country}></Country>
+          ))}
         </div>
       </section>
 
@@ -177,7 +206,10 @@ const Home = () => {
                 <div className="flex items-center gap-6">
                   <div className="avatar">
                     <div className="w-16 rounded-full">
-                    <img src="https://i.postimg.cc/NFJqh7gm/komodo-National-Park.jpg" alt="" />
+                      <img
+                        src="https://i.postimg.cc/NFJqh7gm/komodo-National-Park.jpg"
+                        alt=""
+                      />
                     </div>
                   </div>
                   <div>
