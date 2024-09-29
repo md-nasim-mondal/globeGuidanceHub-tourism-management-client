@@ -36,13 +36,7 @@ const Home = () => {
       {/* Banner Section */}
       <section>
         <Sliders />
-        <div className="text-center mt-12">
-          <Link
-            className="btn bg-green-500 border-none"
-            to={"/allTouristsSpot"}>
-            See All Tourists Spot
-          </Link>
-        </div>
+        
       </section>
       {/* Tourists Spot Section */}
       <section>
@@ -63,6 +57,13 @@ const Home = () => {
               key={spot._id}
               touristSpot={spot}></TouristsSpotCard>
           ))}
+        </div>
+        <div className="text-center mb-12">
+          <Link
+            className="btn bg-green-500 border-none"
+            to={"/allTouristsSpot"}>
+            See All Tourists Spot
+          </Link>
         </div>
       </section>
       {/* Top Traveling Destination */}
