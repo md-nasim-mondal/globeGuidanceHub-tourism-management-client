@@ -20,7 +20,7 @@ const TouristsSpotCard = ({ touristSpot }) => {
         />
       </figure>
       <div className='card-body mx-4 text-accent'>
-        <h2 className='card-title text-primary dark:text-[#1e90ff] md:text-lg lg:text-xl'>
+        <h2 className='card-title text-secondary dark:text-[#1e90ff] md:text-lg lg:text-xl'>
           Tourist Spot Name: {touristsSpotName}
         </h2>
         <p className='text-sm md:text-base lg:text-lg'>

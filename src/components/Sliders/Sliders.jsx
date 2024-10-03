@@ -44,7 +44,7 @@ const Sliders = () => {
                                 <p className="mb-5 font-medium text-white ">
                                 Immerse yourself in a world of breathtaking landscapes and vibrant cultures. Let our expertly curated selection of top destinations ignite your wanderlust and inspire your next unforgettable journey.
                                 </p>
-                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold hover:bg-secondary hover:border-none">
                                     See Our All Tourists Spot
                                 </Link>
                             </div>
@@ -66,7 +66,7 @@ const Sliders = () => {
                                 <p className="mb-5 font-medium text-white ">
                                 Venture beyond the ordinary and uncover the extraordinary. Embark on a journey of discovery as you explore hidden gems, secluded retreats, and secret paradises that promise unforgettable experiences and cherished memories.
                                 </p>
-                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold hover:bg-secondary hover:border-none">
                                     See Our All Tourists Spot
                                 </Link>
                             </div>
@@ -88,7 +88,7 @@ const Sliders = () => {
                                 <p className="mb-5 font-medium text-white ">
                                 From luxurious resorts to adventurous expeditions, tailor your dream vacation with our personalized travel experiences. Whether you seek relaxation, adventure, or cultural immersion, we&apos;re here to make your travel dreams a reality.
                                 </p>
-                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold hover:bg-secondary hover:border-none">
                                     See Our All Tourists Spot
                                 </Link>
                             </div>
@@ -110,7 +110,7 @@ const Sliders = () => {
                                 <p className="mb-5 font-medium text-white ">
                                 Immerse yourself in the rich tapestry of global cultures and traditions. From culinary delights to ancient rituals, embark on a transformative journey filled with authentic experiences that celebrate the diversity of our world.
                                 </p>
-                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold hover:bg-secondary hover:border-none">
                                     See Our All Tourists Spot
                                 </Link>
                             </div>
@@ -132,7 +132,7 @@ const Sliders = () => {
                                 <p className="mb-5 font-medium text-white ">
                                 Break free from the ordinary and elevate your travel experience to new heights. Whether you crave adrenaline-pumping adventures or serene retreats, let us guide you towards extraordinary moments that redefine the art of travel.
                                 </p>
-                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold ">
+                                <Link className="btn btn-ghost btn-outline text-white text-lg font-bold hover:bg-secondary hover:border-none">
                                     See Our All Tourists Spot
                                 </Link>
                             </div>

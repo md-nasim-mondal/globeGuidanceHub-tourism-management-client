@@ -89,7 +89,7 @@ const SignUp = () => {
     <div>
       <form
         onSubmit={handleSignUp}
-        className="card-body md:w-3/4 lg:w-1/2 mx-auto  p-6 rounded-xl my-12 bg-teal-500 ">
+        className="card-body md:w-3/4 lg:w-1/2 mx-auto  p-6 rounded-xl my-12 bg-secondary">
         <h2 className="text-4xl my-4 text-center text-white font-bold">
           SignUp Your Account
         </h2>
@@ -103,7 +103,7 @@ const SignUp = () => {
             type="text"
             name="name"
             placeholder="Enter your name"
-            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 text-secondary focus:border-accent"
             required
           />
         </div>
@@ -117,7 +117,7 @@ const SignUp = () => {
             type="email"
             name="email"
             placeholder="Enter your email address"
-            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 text-secondary focus:border-accent"
             required
           />
         </div>
@@ -131,7 +131,7 @@ const SignUp = () => {
             type="url"
             name="photo"
             placeholder="Enter your photo URL"
-            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 text-secondary focus:border-accent"
             required
           />
         </div>
@@ -145,7 +145,7 @@ const SignUp = () => {
             type={showPassword ? "text" : "password"}
             name="password"
             placeholder="Enter your password"
-            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 text-secondary focus:border-accent"
             required
           />
           <span
@@ -167,7 +167,7 @@ const SignUp = () => {
           />
           <label className="text-white text-base font-medium" htmlFor="terms">
             Accept our{" "}
-            <a className="text-blue-500" href="#">
+            <a className="text-blue-700 hover:underline" href="#">
               terms and conditions
             </a>
           </label>
@@ -175,7 +175,7 @@ const SignUp = () => {
         <div className="form-control my-4">
           <button
             type="submit"
-            className="btn btn-ghost btn-outline text-lg font-semibold text-white bg-green-500 border-none ">
+            className="btn btn-ghost btn-outline text-lg font-semibold text-white bg-primary border-none ">
             SignUp
           </button>
         </div>
@@ -185,7 +185,7 @@ const SignUp = () => {
           Want to login with a social account?
           <br />
           Than Go to
-          <Link className="text-blue-600 font-bold ml-2" to={"/signIn"}>
+          <Link className="text-blue-600 font-bold ml-2 hover:underline" to={"/signIn"}>
             SignIn Page
           </Link>
         </p>

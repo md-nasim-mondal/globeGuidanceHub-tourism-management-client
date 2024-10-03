@@ -100,13 +100,13 @@ const SignIn = () => {
     <div>
       <form
         onSubmit={handleLogin}
-        className="card-body  md:w-3/4 lg:w-1/2 mx-auto bg-primary-content dark:bg-slate-400 dark:bg-opacity-70 p-2 md:p-6 lg:p-10  rounded-xl my-12 animate__animated animate_zoomInUp">
-        <h2 className="text-3xl font-bold text-black my-10 text-center">
+        className="card-body  md:w-3/4 lg:w-1/2 mx-auto bg-secondary dark:bg-slate-400 dark:bg-opacity-70 p-2 md:p-6 lg:p-10  rounded-xl my-12 animate__animated animate_zoomInUp">
+        <h2 className="text-3xl font-bold text-base-100 my-10 text-center">
           SignIn your account
         </h2>
         <div className="form-control">
           <label className="label">
-            <span className="label-text font-semibold text-lg text-black">
+            <span className="label-text font-semibold text-lg text-base-100">
               Email address
             </span>
           </label>
@@ -114,13 +114,13 @@ const SignIn = () => {
             type="email"
             name="email"
             placeholder="Enter your email address"
-            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-green-600"
+            className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 bg-gray-900 text-gray-100 focus:border-primary"
             required
           />
         </div>
         <div className="form-control relative">
           <label className="label">
-            <span className="label-text font-semibold text-lg text-black">
+            <span className="label-text font-semibold text-lg text-base-100">
               Password
             </span>
           </label>
@@ -143,36 +143,36 @@ const SignIn = () => {
           <label className="label">
             <a
               href="#"
-              className="label-text text-black font-semibold text-base text-black-alt link link-hover">
+              className="label-text text-base-100 font-semibold text-base text-base-100-alt link link-hover">
               Forgot password?
             </a>
           </label>
         </div>
         {loginError && <p className="text-red-500">{loginError}</p>}
         <div className="form-control mt-6">
-          <button className="btn btn-ghost w-full text-lg font-semibold text-black btn-outline bg-[#23BE0A] border-none hover:md:w-[50%] mx-auto">
+          <button className="btn btn-primary w-full text-white text-lg font-semibold hover:md:w-[50%] mx-auto">
             SignIn
           </button>
         </div>
-        <p className="text-center text-lg text-black font-medium mt-4 animate__animated animate_fadeInBottomLeft">
+        <p className="text-center text-lg text-base-100 font-medium mt-4 animate__animated animate_fadeInBottomLeft">
           Don&apos;t have an account?{" "}
           <Link
-            className=" text-blue-600 font-bold underline pl-1"
+            className=" text-blue-700 font-bold hover:underline pl-1"
             to={"/signUp"}>
             SignUp
           </Link>{" "}
         </p>
-        <h2 className="text-3xl font-bold text-center">Or</h2>
+        <h2 className="text-3xl font-bold text-center text-base-100">Or</h2>
         <div className="flex flex-col md:flex-row gap-4 justify-center animate__animated  animate_fadeInBottomRight">
           <button
             onClick={handleGoogleLogin}
-            className="btn btn-outline btn-ghost text-black text-lg font-semibold">
+            className="btn btn-outline btn-ghost text-base-100 text-lg font-semibold">
             <FaGoogle className="text-2xl" />
             Sign In With Google
           </button>
           <button
             onClick={handleGithubLogin}
-            className="btn btn-outline btn-ghost text-lg text-black font-semibold">
+            className="btn btn-outline btn-ghost text-lg text-base-100 font-semibold">
             <FaGithub className="text-2xl" />
             Sign Up With Github
           </button>

@@ -16,7 +16,7 @@ const Country = ({ country }) => {
           <h2 className="card-title text-secondary">{countryName}</h2>
           <p className="text-accent">{description}</p>
           <div className="card-actions">
-            <Link className="btn btn-secondary text-base-100 hover:text-accent" to={`/countries/${countryName}`}>See All Tourists Spot of {countryName} </Link>
+            <Link className="btn btn-primary text-base-100 hover:text-accent" to={`/countries/${countryName}`}>See All Tourists Spot of {countryName} </Link>
           </div>
         </div>
       </div>

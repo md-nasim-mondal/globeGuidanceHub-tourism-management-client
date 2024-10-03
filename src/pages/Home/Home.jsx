@@ -60,7 +60,7 @@ const Home = () => {
         </div>
         <div className="text-center mb-12">
           <Link
-            className="btn bg-secondary border-none text-base-100 hover:text-accent"
+            className="btn btn-outline bg-none hover:bg-secondary hover:border-none hover:text-base-100 text-accent border-accent border-2 font-semibold"
             to={"/allTouristsSpot"}>
             See All Tourists Spot
           </Link>
@@ -201,7 +201,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl text-accent">Bangladesh</h3>
-                    <button className="btn-link">View All Tours</button>
+                    <button className="btn-link hover:underline no-underline">View All Tours</button>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -215,7 +215,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl text-accent">Malaysia</h3>
-                    <button className="btn-link">View All Tours</button>
+                    <button className="btn-link hover:underline no-underline">View All Tours</button>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -226,7 +226,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl text-accent">Vietnam</h3>
-                    <button className="btn-link">View All Tours</button>
+                    <button className="btn-link hover:underline no-underline">View All Tours</button>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -237,7 +237,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl text-accent">Cambodia</h3>
-                    <button className="btn-link">View All Tours</button>
+                    <button className="btn-link hover:underline no-underline">View All Tours</button>
                   </div>
                 </div>
               </div>

@@ -44,7 +44,7 @@ const Navbar = () => {
       !isActive
         ? "xl:text-lg font-semibold  rounded-lg text-base-100"
         : "xl:text-lg text-primary border-b-primary border-b-4 font-semibold"
-    } hover:text-primary`;
+    } hover:text-primary focus:text-primary`;
 
   const navLinks = (
     <>
@@ -116,8 +116,8 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-white  mb-2  md:mr-2"
-                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-primary  border-primary-content border-b-4 mb-2  md:mr-2 font-semibold"
+                  ? "btn xl:text-lg font-semibold  rounded-lg text-white mb-2 md:mr-2"
+                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-primary  border-primary-content border-b-4 mb-2 md:mr-2 font-semibold"
               }
               to={"/signIn"}>
               Sign In
@@ -208,7 +208,7 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline  border border-primary-content rounded-lg text-primary"
+                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline border-secondary rounded-lg text-primary"
                   : "btn btn-sm md:btn-md btn-outline border-4 border-primary mr-0.5 md:mr-4 text-base-100 font-semibold"
               }
               to={"/signIn"}>
