@@ -58,15 +58,18 @@ const AddTouristsSpot = () => {
         }
       });
   };
+
+  const inputClasses = "w-full px-4 py-3 rounded-md border border-accent focus:border-4 focus:text-secondary"
+
+  const labelClasses = "label label-text font-semibold text-lg text-accent"
+
   return (
-    <div>
-      <div className="container mx-auto mt-12 min-h-[80vh] pt-14 pb-28">
-        <div className="text-center px-6 md:px-10 py-8 lg:px-28 lg:py-16 bg-base-content lg:w-3/4 rounded-md mx-auto">
+        <div className="text-center px-6 md:px-10 py-8 lg:px-28 lg:py-16 bg-base-100 lg:w-3/4 rounded-md mx-auto my-24 border shadow-xl">
           <div>
-            <h2 className="text-5xl pb-6 font-extrabold text-primary-content ">
+            <h2 className="text-5xl pb-6 font-extrabold text-secondary ">
               Add a New Tourists Spot
             </h2>
-            <p className="text-lg text-center md:w-[90%] mx-auto text-primary-content pb-12">
+            <p className="text-lg text-center md:w-[90%] mx-auto text-accent pb-12">
               Share your favorite travel destinations with GlobeGuidanceHub&apos;s
               Tourist Spot Form. Contribute to our growing collection of
               must-see places, inspiring fellow travelers to explore new
@@ -78,29 +81,25 @@ const AddTouristsSpot = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
             <div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+                <label className={labelClasses}>
                     Tourists Spot Name
-                  </span>
                 </label>
                 <input
                   type="text"
                   name="spotName"
                   placeholder="Enter Tourists Spot Name"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+                <label className={labelClasses}>
                     Country Name
-                  </span>
                 </label>
                 <select
                   name="country"
                   id="country"
-                  className="font-semibold text-xl w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600">
+                  className={inputClasses}>
                   <option>Select Country</option>
                   <option value="Bangladesh">Bangladesh</option>
                   <option value="Indonesia">Indonesia</option>
@@ -111,38 +110,32 @@ const AddTouristsSpot = () => {
                 </select>
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Location
-                  </span>
                 </label>
                 <input
                   type="text"
                   name="location"
                   placeholder="Enter spot location"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Travel Time
-                  </span>
                 </label>
                 <input
                   type="text"
                   name="travelTime"
                   placeholder="Enter travel_time => like- 7 days"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     User Name
-                  </span>
                 </label>
                 <input
                   type="text"
@@ -150,73 +143,63 @@ const AddTouristsSpot = () => {
                   placeholder={user?.displayName}
                   value={user?.displayName}
                   readOnly
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
             </div>
             <div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Photo URL
-                  </span>
                 </label>
                 <input
                   type="url"
                   name="photo"
                   placeholder="Enter Spot Photo URL"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Average Cost
-                  </span>
                 </label>
                 <input
                   type="number"
                   name="averageCost"
                   placeholder="Enter Spot Average Cost in Dollar"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Seasonality
-                  </span>
                 </label>
                 <input
                   type="text"
                   name="seasonality"
                   placeholder="Enter seasonality - like summer, winter"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     Total Visitors Per Year
-                  </span>
                 </label>
                 <input
                   type="number"
                   name="totalVisitors"
                   placeholder="Enter totalVisitorsPerYear => like- 10000"
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text  font-semibold text-lg text-primary-content">
+              <label className={labelClasses}>
                     User Email
-                  </span>
                 </label>
                 <input
                   type="email"
@@ -224,7 +207,7 @@ const AddTouristsSpot = () => {
                   placeholder="Please Enter Your Email by which Email You Signed In"
                   value={user?.email}
                   readOnly
-                  className="w-full px-4 py-3 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content placeholder:text-black text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"
+                  className={inputClasses}
                   required
                 />
               </div>
@@ -239,18 +222,16 @@ const AddTouristsSpot = () => {
                 <textarea
                   name="description"
                   id="description"
-                  className="w-full px-4 py-3 md:min-h-32 rounded-md border focus:border-4 border-gray-700 focus:text-gray-100 dark:bg-gray-400 bg-blue-100 bg-opacity-60 dark:bg-opacity-100 focus:bg-gray-900 text-primary-content text-opacity-60 dark:text-opacity-80 dark:text-white focus:border-green-600"></textarea>
+                  className="w-full px-4 py-3 md:min-h-32 rounded-md border focus:border-4 focus:text-secondary"></textarea>
               </div>
               <input
                 type="submit"
                 value="Add Tourists Spot"
-                className="btn w-full bg-[#D2B48C] border-2 rounded-md border-[#331A15] text-primary-content"
+                className="btn w-full bg-secondary rounded-md text-accent"
               />
             </div>
           </form>
         </div>
-      </div>
-    </div>
   );
 };
 

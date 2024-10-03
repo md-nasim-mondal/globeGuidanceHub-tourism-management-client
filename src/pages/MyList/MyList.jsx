@@ -199,7 +199,7 @@ const MyList = () => {
                   <td>
                     <div className="flex gap-4 justify-center">
                       <button
-                        className="btn btn-outline btn-info"
+                        className="btn btn-secondary"
                         onClick={() => {
                           openModal();
                           setTouristSpot(spot);
@@ -208,7 +208,7 @@ const MyList = () => {
                       </button>
                       <button
                         onClick={() => handleDelete(spot._id)}
-                        className="btn btn-warning">
+                        className="btn btn-error">
                         Delete
                       </button>
                     </div>

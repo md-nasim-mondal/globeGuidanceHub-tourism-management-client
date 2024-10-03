@@ -48,8 +48,8 @@ const Contact = () => {
                 <title>GlobeGuidanceHub || Contact</title>
                 <link rel="icon" type="image/svg+xml" href={Icon} />
             </Helmet>
-            <h1 className={`${shouldAnimate ? '  animate__animated animate__backInDown' : ''} text-2xl md:text-5xl flex items-center font-bold text-blue-500`}>
-                <IoMdContact className="text-7xl text-blue-600" /> Contact With
+            <h1 className={`${shouldAnimate ? '  animate__animated animate__backInDown' : ''} text-2xl md:text-5xl flex items-center font-bold text-secondary`}>
+                <IoMdContact className="text-7xl text-secondary" /> Contact With
                 Us
             </h1>
             <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
@@ -74,15 +74,15 @@ const Contact = () => {
                         className="textarea textarea-bordered textarea-lg w-full"></textarea>
                     <button
                         onClick={handleSendButton}
-                        className="btn btn-outline  btn-primary  w-[40%] bg-[#23BE0A] border-none text-[#FFFFFF]">
+                        className="btn w-[40%] btn-secondary border-none ">
                         Send
                     </button>
                 </div>
                 <div className="flex flex-col gap-4 items-center md:items-start md:pr-8">
-                    <h3 className={`${shouldAnimate ? ' animate__animated animate__flip ' : ''} text-3xl text-black`}>
+                    <h3 className={`${shouldAnimate ? ' animate__animated animate__flip ' : ''} text-3xl text-accent`}>
                         Visit our social pages
                     </h3>
-                    <div className={`${shouldAnimate ? 'animate__animated animate__rollIn ' : '' } text-4xl flex gap-4 text-blue-500`}>
+                    <div className={`${shouldAnimate ? 'animate__animated animate__rollIn ' : '' } text-4xl flex gap-4 text-secondary`}>
                         <a href="#">
                             <FaFacebookSquare />
                         </a>
@@ -96,8 +96,8 @@ const Contact = () => {
                             <FaLinkedinIn />
                         </a>
                     </div>
-                    <h3 className={`${shouldAnimate ? 'animate__animated animate__zoomInUp' : ''} text-3xlb text-black`}>Chat With Us</h3>
-                    <div className={`${shouldAnimate ? 'animate__animated animate__zoomInRight' : ''} text-4xl flex gap-4 text-blue-500`}>
+                    <h3 className={`${shouldAnimate ? 'animate__animated animate__zoomInUp' : ''} text-3xl text-accent`}>Chat With Us</h3>
+                    <div className={`${shouldAnimate ? 'animate__animated animate__zoomInRight' : ''} text-4xl flex gap-4 text-secondary`}>
                         <a href="#">
                             <FaFacebookMessenger />
                         </a>
@@ -109,14 +109,14 @@ const Contact = () => {
                         </a>
                     </div>
                     <div className={`${shouldAnimate ? 'animate__animated animate__rollIn' : ''}`}>
-                    <h3 className="text-3xl text-black">Call Our Hot-Lines</h3>
-                    <a className="text-3xl text-black" href="#">
+                    <h3 className="text-3xl text-accent">Call Our Hot-Lines</h3>
+                    <a className="text-3xl text-accent" href="#">
                         01699308-485
                     </a>
                     </div>
                 </div>
             </div>
-            <h3 className="text-3xl font-semibold text-center mt-12 text-black">
+            <h3 className="text-3xl font-semibold text-center mt-12 text-accent">
                 Thanks for visiting us
             </h3>
         </div>
