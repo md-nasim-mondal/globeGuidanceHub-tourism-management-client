@@ -6,7 +6,7 @@ import userDefaultPic from "../../../assets/images/user.png";
 import Swal from "sweetalert2";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
-import logo from '../../../assets/logo22.svg'
+import logo from "../../../assets/logo22.svg";
 import ThemeSwitcher from "../../../components/ThemeSwitcher/ThemeSwitcher";
 
 const Navbar = () => {
@@ -39,29 +39,28 @@ const Navbar = () => {
       });
   };
 
+  const navLinkClasses = (isActive) =>
+    `${
+      !isActive
+        ? "xl:text-lg font-semibold  rounded-lg text-white"
+        : "xl:text-lg text-primary-content border-b-primary-content border-b-4 font-semibold"
+    }`;
+
   const navLinks = (
     <>
       <li>
         <NavLink
           onClick={() => setOpen(false)}
-          className={({ isActive }) =>
-            !isActive
-              ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-              : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
-          }
-          to="/">
+          className={({ isActive }) => navLinkClasses(isActive)}
+          to='/'>
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
           onClick={() => setOpen(false)}
-          className={({ isActive }) =>
-            !isActive
-              ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-              : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
-          }
-          to="/allTouristsSpot">
+          className={({ isActive }) => navLinkClasses(isActive)}
+          to='/allTouristsSpot'>
           All Tourists Spot
         </NavLink>
       </li>
@@ -70,25 +69,25 @@ const Navbar = () => {
           <li>
             <NavLink
               onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                !isActive
-                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
-              }
-              to="/addTouristsSpot">
+              className={({ isActive }) => navLinkClasses(isActive)}
+              to='/addTouristsSpot'>
               Add Tourists Spot
             </NavLink>
           </li>
           <li>
             <NavLink
               onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                !isActive
-                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
-              }
-              to="/myList">
+              className={({ isActive }) => navLinkClasses(isActive)}
+              to='/myList'>
               My List
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              onClick={() => setOpen(false)}
+              className={({ isActive }) => navLinkClasses(isActive)}
+              to='/contact'>
+              Contact Us
             </NavLink>
           </li>
           <li className={`${user ? "2xl:hidden" : "lg:hidden"}`}>
@@ -97,102 +96,93 @@ const Navbar = () => {
                 setOpen(false);
                 handleSignOut();
               }}
-              className="btn text-lg font-semibold rounded-lg text-red-400">
+              className='btn text-lg font-semibold rounded-lg text-red-400'>
               SignOut
             </button>
           </li>
         </>
       ) : (
         <>
-          <li className={`${user ? "2xl:hidden" : "lg:hidden"}`} >
+          <li>
+            <NavLink
+              onClick={() => setOpen(false)}
+              className={({ isActive }) => navLinkClasses(isActive)}
+              to='/contact'>
+              Contact Us
+            </NavLink>
+          </li>
+          <li className={`${user ? "2xl:hidden" : "lg:hidden"}`}>
             <NavLink
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
+                  ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-white  mb-2  md:mr-2"
+                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-primary-content  border-primary-content border-b-4 mb-2  md:mr-2 font-semibold"
               }
               to={"/signIn"}>
-              <button>Sign In</button>
+              Sign In
             </NavLink>
           </li>
         </>
-        
       )}
-      <li>
-        <NavLink
-          onClick={() => setOpen(false)}
-          className={({ isActive }) =>
-            !isActive
-              ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-black  mb-2  md:mr-2"
-              : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-[#23BE0A]  border-[#23BE0A] border-b-4 btn-ghost mb-2  md:mr-2"
-          }
-          to="/contact">
-          Contact Us
-        </NavLink>
-      </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 dark:bg-white rounded-bl-lg rounded-xl">
-      <div className="navbar-start">
-        <div className="dropdown">
+    <div className='navbar bg-primary container w-[94%] md:w-full mx-auto rounded-b-lg items-center pb-4'>
+      <div className='navbar-start'>
+        <div className='dropdown'>
           <div
             tabIndex={0}
-            role="button"
+            role='button'
             onClick={() => setOpen(!open)}
-            className={`btn-ghost lg:hidden
-            ${user ? "2xl:hidden" : "lg:hidden"}
-                            `}>
+            className={`btn-ghost lg:hidden`}>
             {open ? (
-              <IoClose className="text-2xl text-black dark:text-primary-content" />
+              <IoClose className='text-2xl text-white dark:text-primary-content' />
             ) : (
-              <IoMenu className="text-2xl text-black dark:text-primary-content" />
+              <IoMenu className='text-2xl text-white dark:text-primary-content' />
             )}
           </div>
           <ul
             tabIndex={0}
             //  dropdown-content
-            className={`menu menu-sm
-                             absolute mt-5 z-[50] p-2 shadow 
-             ${user ? "2xl:hidden" : "lg:hidden"}
-                            ${open ? "" : "hidden"}
-                             bg-base-100 dark:bg-lime-100 rounded-b-xl w-52`}>
+            className={`menu menu-sm absolute mt-5 z-[50] p-2 shadow lg:hidden ${
+              open ? "block" : "hidden"
+            } bg-base-100 dark:bg-lime-100 rounded-b-xl w-52`}>
             {navLinks}
           </ul>
         </div>
         <NavLink
           onClick={() => setOpen(false)}
-          className="animate__animated animate__backInRight btn-ghost md:text-2xl rounded-2xl xl:text-3xl flex gap-2 text-black items-center font-bold flex-wrap">
+          className='animate__animated animate__backInRight btn-ghost md:text-2xl rounded-2xl xl:text-3xl flex gap-2 text-white items-center font-bold flex-wrap'>
           <img
-            className="w-10 lg:w-12 xl:w-14"
+            className='w-10 lg:w-12 xl:w-14'
             src={logo}
-            alt="Logo Coming Soon"
+            alt='Logo Coming Soon'
           />
-          <p className="flex flex-wrap">
+          <p className='flex flex-wrap text-sm xl:text-xl'>
             Globe
-            <span className="text-green-600">GuidanceHub</span>
+            <span className='text-primary-content'>GuidanceHub</span>
           </p>
         </NavLink>
       </div>
       <div
         className={`animate__animated animate__backInUp navbar-center hidden lg:flex
         ${user ? "2xl:flex" : "lg:flex"}`}>
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className='menu menu-horizontal space-x-1'>{navLinks}</ul>
       </div>
-      <div className="animate__animated animate__backInLeft navbar-end">
+      <div className='animate__animated animate__backInLeft navbar-end'>
         {user ? (
-          <div className="flex items-center">
+          <div className='flex items-center'>
             <div
-              data-tooltip-id="my-tooltip"
+              data-tooltip-id='my-tooltip'
               data-tooltip-content={displayName}>
               <div
                 tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar">
-                <div className="w-12 rounded-full">
+                role='button'
+                className='btn btn-ghost btn-circle avatar'>
+                <div className='w-12 rounded-full'>
                   <img
-                    alt="Photo Coming Soon.."
+                    alt='Photo Coming Soon..'
                     src={photoURL || userDefaultPic}
                   />
                 </div>
@@ -204,7 +194,7 @@ const Navbar = () => {
                   setOpen(false);
                   handleSignOut();
                 }}
-                className="btn btn-sm md:btn-md ml-0.5 md:ml-4 text-lg font-semibold btn-outline bg-none border-solid border border-[#23BE0A] rounded-lg text-[#23BE0A]">
+                className='btn btn-sm md:btn-md ml-0.5 md:ml-4 text-lg font-semibold btn-outline border-solid border border-primary-content rounded-lg text-white hover:text-red-500'>
                 SignOut
               </button>
             </div>
@@ -218,29 +208,19 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline bg-none border-solid border border-[#23BE0A] rounded-lg text-[#23BE0A]"
-                  : "btn btn-sm md:btn-md btn-outline bg-[#23BE0A] border-none  btn-ghost mr-0.5 md:mr-4"
+                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline  border border-primary-content rounded-lg text-white"
+                  : "btn btn-sm md:btn-md btn-outline bg-none border-4 border-primary-content mr-0.5 md:mr-4 text-primary-content font-semibold"
               }
               to={"/signIn"}>
-              <button>Sign In</button>
-            </NavLink>
-            <NavLink
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                !isActive
-                  ? "btn p btn-sm md:btn-md text-lg font-semibold btn-outline bg-none border-solid border border-[#23BE0A] rounded-lg text-[#23BE0A]"
-                  : "btn btn-sm md:btn-md btn-outline bg-[#23BE0A] border-none btn-ghost"
-              }
-              to={"/signUp"}>
-              <button>Sign Up</button>
+              Sign In
             </NavLink>
           </div>
         )}
-        <div className="ml-2">
-        <ThemeSwitcher/>
+        <div className='ml-2'>
+          <ThemeSwitcher />
         </div>
       </div>
-      <Tooltip id="my-tooltip" place="left" />
+      <Tooltip id='my-tooltip' place='left' />
     </div>
   );
 };
