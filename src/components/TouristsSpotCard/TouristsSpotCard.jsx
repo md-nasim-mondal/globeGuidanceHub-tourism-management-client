@@ -11,7 +11,7 @@ const TouristsSpotCard = ({ touristSpot }) => {
     totalVisitorsPerYear,
   } = touristSpot;
   return (
-    <div className='card card-compact bg-base-100 dark:bg-[#3d3d3d] shadow-xl'>
+    <div className='card card-compact bg-base-100 shadow-xl'>
       <figure className='p-4 lg:p-8'>
         <img
           src={image}

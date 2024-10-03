@@ -42,7 +42,7 @@ const Navbar = () => {
   const navLinkClasses = (isActive) =>
     `${
       !isActive
-        ? "xl:text-lg font-semibold  rounded-lg text-base-100"
+        ? "xl:text-lg font-semibold  rounded-lg text-white"
         : "xl:text-lg text-primary border-b-primary border-b-4 font-semibold"
     } hover:text-primary focus:text-primary`;
 
@@ -128,7 +128,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className='navbar bg-accent container w-[94%] md:w-full mx-auto rounded-b-lg items-center pb-4'>
+    <div className='navbar bg-accent dark:bg-[#1e1e1e] container w-[94%] md:w-full mx-auto rounded-b-lg items-center pb-4'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div
@@ -159,7 +159,7 @@ const Navbar = () => {
             src={logo}
             alt='Logo Coming Soon'
           /> */}
-          <p className='flex flex-wrap text-sm xl:text-xl'>
+          <p className='flex flex-wrap text-sm xl:text-xl text-white'>
             Globe
             <span className='text-primary'>GuidanceHub</span>
           </p>

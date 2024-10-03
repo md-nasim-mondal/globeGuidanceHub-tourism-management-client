@@ -19,7 +19,7 @@ export default {
           ...require("daisyui/src/theming/themes")["dark"],
           primary: "#17c7d0",
           secondary: "#068488",
-          "base-100": "#2b2d42",
+          "base-100": "#161616",
           accent:"#ffffff"
         },
       },

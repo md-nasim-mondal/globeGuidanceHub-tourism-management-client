@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 // import logo from "../../../assets/logo22.svg";
 const Footer = () => {
   return (
-    <div className='bg-accent'>
-      <footer className='footer container mx-auto py-20 bg-accent text-base-100 justify-center lg:justify-between'>
+    <div className='bg-accent dark:bg-[#2b2d42]'>
+      <footer className='footer container mx-auto py-20 bg-accent text-white justify-center lg:justify-between dark:bg-[#2b2d42]'>
         <aside>
           {/* <img className='w-20 md:w-32' src={logo} alt='' /> */}
           <p>
