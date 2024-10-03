@@ -42,9 +42,9 @@ const Navbar = () => {
   const navLinkClasses = (isActive) =>
     `${
       !isActive
-        ? "xl:text-lg font-semibold  rounded-lg text-white"
-        : "xl:text-lg text-primary-content border-b-primary-content border-b-4 font-semibold"
-    }`;
+        ? "xl:text-lg font-semibold  rounded-lg text-base-100"
+        : "xl:text-lg text-primary border-b-primary border-b-4 font-semibold"
+    } hover:text-primary`;
 
   const navLinks = (
     <>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 setOpen(false);
                 handleSignOut();
               }}
-              className='btn text-lg font-semibold rounded-lg text-red-400'>
+              className='btn text-lg font-semibold rounded-lg text-base-100 hover:text-red-400'>
               SignOut
             </button>
           </li>
@@ -117,7 +117,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 !isActive
                   ? "btn xl:text-lg font-semibold btn-outline bg-none border-none  rounded-lg text-white  mb-2  md:mr-2"
-                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-primary-content  border-primary-content border-b-4 mb-2  md:mr-2 font-semibold"
+                  : "btn  btn-outline xl:text-lg border-x-0 border-t-0 text-primary  border-primary-content border-b-4 mb-2  md:mr-2 font-semibold"
               }
               to={"/signIn"}>
               Sign In
@@ -128,7 +128,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className='navbar bg-primary container w-[94%] md:w-full mx-auto rounded-b-lg items-center pb-4'>
+    <div className='navbar bg-accent container w-[94%] md:w-full mx-auto rounded-b-lg items-center pb-4'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div
@@ -153,7 +153,7 @@ const Navbar = () => {
         </div>
         <NavLink
           onClick={() => setOpen(false)}
-          className='animate__animated animate__backInRight btn-ghost md:text-2xl rounded-2xl xl:text-3xl flex gap-2 text-white items-center font-bold flex-wrap'>
+          className='animate__animated animate__backInRight btn-ghost md:text-2xl rounded-2xl xl:text-3xl flex gap-2 text-base-100 items-center font-bold flex-wrap'>
           <img
             className='w-10 lg:w-12 xl:w-14'
             src={logo}
@@ -161,7 +161,7 @@ const Navbar = () => {
           />
           <p className='flex flex-wrap text-sm xl:text-xl'>
             Globe
-            <span className='text-primary-content'>GuidanceHub</span>
+            <span className='text-primary'>GuidanceHub</span>
           </p>
         </NavLink>
       </div>
@@ -208,8 +208,8 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline  border border-primary-content rounded-lg text-white"
-                  : "btn btn-sm md:btn-md btn-outline bg-none border-4 border-primary-content mr-0.5 md:mr-4 text-primary-content font-semibold"
+                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline  border border-primary-content rounded-lg text-primary"
+                  : "btn btn-sm md:btn-md btn-outline border-4 border-primary mr-0.5 md:mr-4 text-base-100 font-semibold"
               }
               to={"/signIn"}>
               Sign In

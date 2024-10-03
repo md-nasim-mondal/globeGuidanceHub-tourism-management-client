@@ -36,22 +36,22 @@ const Home = () => {
       {/* Banner Section */}
       <section>
         <Sliders />
-        
       </section>
+
       {/* Tourists Spot Section */}
       <section>
-        <div className="pt-28">
-          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
+        <div className="pt-24">
+          <h1 className="text-3xl md:text-5xl text-secondary text-center pb-8 font-bold">
             Tourists Spot
           </h1>
-          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-accent">
             Embark on a journey of discovery with GlobeGuidanceHub&apos;s
             Tourist Spot section. Dive into a world of iconic landmarks, hidden
             gems, and must-see attractions, curated to inspire your next
             adventure.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
           {displayTouristsSpot.slice(0, 6).map((spot) => (
             <TouristsSpotCard
               key={spot._id}
@@ -60,20 +60,20 @@ const Home = () => {
         </div>
         <div className="text-center mb-12">
           <Link
-            className="btn bg-green-500 border-none"
+            className="btn bg-secondary border-none text-base-100 hover:text-accent"
             to={"/allTouristsSpot"}>
             See All Tourists Spot
           </Link>
         </div>
       </section>
-      {/* Top Traveling Destination */}
 
+      {/* Top Traveling Destination */}
       <section>
         <div className="pb-12">
-          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
+          <h1 className="text-3xl md:text-5xl text-secondary text-center pb-8 font-bold">
             Top Traveling Destination
           </h1>
-          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-accent">
             Discover iconic landmarks, tropical paradises, vibrant cities, and
             ancient wonders with GlobeGuidanceHub&apos;s Top Traveling
             Destinations. Lose yourself in breathtaking landscapes, cultural
@@ -90,8 +90,8 @@ const Home = () => {
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">Rangamati, Bangladesh</h2>
-              <p>
+              <h2 className="card-title text-secondary">Rangamati, Bangladesh</h2>
+              <p className="text-accent">
                 {" "}
                 Rangamati, nestled in the Chittagong Hill Tracts region of
                 Bangladesh, captivates visitors with its picturesque landscape.
@@ -107,8 +107,8 @@ const Home = () => {
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">Ho Chi Minh City, Vietnam</h2>
-              <p>
+              <h2 className="card-title text-secondary">Ho Chi Minh City, Vietnam</h2>
+              <p className="text-accent">
                 {" "}
                 Ho Chi Minh City, formerly known as Saigon, is Vietnam&apos;s
                 largest city and a vibrant hub of culture, history, and
@@ -125,8 +125,8 @@ const Home = () => {
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">Bangkok, Thailand</h2>
-              <p>
+              <h2 className="card-title text-secondary">Bangkok, Thailand</h2>
+              <p className="text-accent">
                 Bangkok, the vibrant capital of Thailand, is a bustling
                 metropolis known for its ornate temples, bustling street
                 markets, and vibrant nightlife.{" "}
@@ -142,8 +142,8 @@ const Home = () => {
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title"> Langkawi, Malaysia</h2>
-              <p>
+              <h2 className="card-title text-secondary"> Langkawi, Malaysia</h2>
+              <p className="text-accent">
                 {" "}
                 Langkawi, an archipelago of 99 islands off the northwest coast
                 of Malaysia, is known for its stunning beaches, lush
@@ -158,10 +158,10 @@ const Home = () => {
 
       <section className="py-28">
         <div>
-          <h1 className="text-3xl md:text-5xl text-base-content text-center pb-8 font-bold">
+          <h1 className="text-3xl md:text-5xl text-secondary text-center pb-8 font-bold">
             Countries
           </h1>
-          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-base-content pb-12">
+          <p className="md:text-lg text-center w-[90%] md:w-[80%] font-medium mx-auto text-accent pb-12">
             Explore diverse destinations around the globe with
             GlobeGuidanceHub&apos;s Country Section. Discover rich cultural
             heritage, breathtaking landscapes, and practical travel information
@@ -178,14 +178,14 @@ const Home = () => {
 
       {/* Popular Tourism Country Section */}
       <section>
-        <div className="hero mb-28 bg-base-200 bg-opacity-20 py-12 rounded-3xl">
+        <div className="hero bg-base-100 shadow py-12 mb-12 rounded-3xl">
           <div className="hero-content p-0 md:p-4 flex-col lg:flex-row-reverse gap-8 xl:gap-12">
             <div className="text-center lg:text-left">
               <div>
-                <h1 className="text-3xl md:text-5xl font-bold">
+                <h1 className="text-3xl md:text-5xl font-bold text-secondary">
                   Popular Tourism Countries
                 </h1>
-                <p className="py-6 md:text-lg text-center break-words mx-auto text-base-content">
+                <p className="py-6 md:text-lg text-center break-words mx-auto text-accent">
                   Explore the world&apos;s most sought-after tourist
                   destinations on GlobeGuidanceHub. From bustling cities to
                   serene beaches, discover iconic landmarks, cultural treasures,
@@ -200,7 +200,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Bangladesh</h3>
+                    <h3 className="text-3xl text-accent">Bangladesh</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Malaysia</h3>
+                    <h3 className="text-3xl text-accent">Malaysia</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Vietnam</h3>
+                    <h3 className="text-3xl text-accent">Vietnam</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
@@ -236,14 +236,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl">Cambodia</h3>
+                    <h3 className="text-3xl text-accent">Cambodia</h3>
                     <button className="btn-link">View All Tours</button>
                   </div>
                 </div>
               </div>
             </div>
             <div className="card shrink-0 w-full max-w-xs md:max-w-xl shadow-2xl bg-base-100">
-              <h1 className="text-2xl text-base-content text-center pt-12 px-6 font-semibold">
+              <h1 className="text-2xl text-secondary text-center pt-12 px-6 font-semibold">
                 Subscribe For Getting Our Latest Update News
               </h1>
               <form className="card-body">
@@ -272,7 +272,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">SubsCribe</button>
+                  <button className="btn btn-primary text-white hover:text-accent">SubsCribe</button>
                 </div>
               </form>
             </div>
