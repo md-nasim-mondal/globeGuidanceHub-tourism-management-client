@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo22.svg";
+// import logo from "../../../assets/logo22.svg";
 const Footer = () => {
   return (
     <div className='bg-accent'>
       <footer className='footer container mx-auto py-20 bg-accent text-base-100 justify-center lg:justify-between'>
         <aside>
-          <img className='w-20 md:w-32' src={logo} alt='' />
+          {/* <img className='w-20 md:w-32' src={logo} alt='' /> */}
           <p>
-            <span className='md:text-xl'>GlobeGuidanceHub Company Ltd.</span>
+            <span className='md:text-xl'><span className='flex flex-wrap text-sm xl:text-xl'>
+            Globe
+            <span className='text-primary'>GuidanceHub</span>
+          </span> Company Ltd.</span>
             <br />
             Providing reliable services since 1992
           </p>

@@ -89,13 +89,13 @@ const SignUp = () => {
     <div>
       <form
         onSubmit={handleSignUp}
-        className="card-body md:w-3/4 lg:w-1/2 mx-auto  p-6 rounded-xl my-12 bg-secondary">
-        <h2 className="text-4xl my-4 text-center text-white font-bold">
+        className="card-body md:w-3/4 lg:w-1/2 mx-auto  p-6 rounded-xl dark:bg-slate-400 my-12 bg-secondary">
+        <h2 className="text-4xl my-4 text-center text-base-100 font-bold">
           SignUp Your Account
         </h2>
         <div className="form-control">
           <label className="label block font-semibold">
-            <span className="label-text font-semibold text-lg text-white">
+            <span className="label-text font-semibold text-lg text-base-100">
               Your Name
             </span>
           </label>
@@ -109,7 +109,7 @@ const SignUp = () => {
         </div>
         <div className="form-control">
           <label className="label block font-semibold">
-            <span className="label-text font-semibold text-lg text-white">
+            <span className="label-text font-semibold text-lg text-base-100">
               Email Address
             </span>
           </label>
@@ -123,7 +123,7 @@ const SignUp = () => {
         </div>
         <div className="form-control">
           <label className="label block font-semibold">
-            <span className="label-text font-semibold text-lg text-white">
+            <span className="label-text font-semibold text-lg text-base-100">
               Photo URL
             </span>
           </label>
@@ -137,7 +137,7 @@ const SignUp = () => {
         </div>
         <div className="form-control relative">
           <label className="label block font-semibold">
-            <span className="label-text font-semibold text-lg text-white">
+            <span className="label-text font-semibold text-lg text-base-100">
               Password
             </span>
           </label>
@@ -149,7 +149,7 @@ const SignUp = () => {
             required
           />
           <span
-            className="absolute right-[2%] bottom-[18%] cursor-pointer text-white"
+            className="absolute right-[2%] bottom-[18%] cursor-pointer text-base-100"
             onClick={() => setShowPassword(!showPassword)}>
             {showPassword ? (
               <FaEye className="text-blue-600"></FaEye>
@@ -163,9 +163,9 @@ const SignUp = () => {
             type="checkbox"
             name="terms"
             id="terms"
-            className="mr-2 text-white"
+            className="mr-2 text-base-100"
           />
-          <label className="text-white text-base font-medium" htmlFor="terms">
+          <label className="text-base-100 text-base font-medium" htmlFor="terms">
             Accept our{" "}
             <a className="text-blue-700 hover:underline" href="#">
               terms and conditions
@@ -175,11 +175,11 @@ const SignUp = () => {
         <div className="form-control my-4">
           <button
             type="submit"
-            className="btn btn-ghost btn-outline text-lg font-semibold text-white bg-primary border-none ">
+            className="btn btn-ghost btn-outline text-lg font-semibold text-base-100 bg-primary border-none ">
             SignUp
           </button>
         </div>
-        <p className="text-center text-white mt-4">
+        <p className="text-center text-base-100 mt-4">
           Already have an account?
           <br /> Or <br />
           Want to login with a social account?

@@ -6,7 +6,7 @@ import userDefaultPic from "../../../assets/images/user.png";
 import Swal from "sweetalert2";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
-import logo from "../../../assets/logo22.svg";
+// import logo from "../../../assets/logo22.svg";
 import ThemeSwitcher from "../../../components/ThemeSwitcher/ThemeSwitcher";
 
 const Navbar = () => {
@@ -154,11 +154,11 @@ const Navbar = () => {
         <NavLink
           onClick={() => setOpen(false)}
           className='animate__animated animate__backInRight btn-ghost md:text-2xl rounded-2xl xl:text-3xl flex gap-2 text-base-100 items-center font-bold flex-wrap'>
-          <img
+          {/* <img
             className='w-10 lg:w-12 xl:w-14'
             src={logo}
             alt='Logo Coming Soon'
-          />
+          /> */}
           <p className='flex flex-wrap text-sm xl:text-xl'>
             Globe
             <span className='text-primary'>GuidanceHub</span>
