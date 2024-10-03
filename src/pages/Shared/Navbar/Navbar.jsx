@@ -208,8 +208,8 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 !isActive
-                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline border-secondary rounded-lg text-primary"
-                  : "btn btn-sm md:btn-md btn-outline border-4 border-primary mr-0.5 md:mr-4 text-base-100 font-semibold"
+                  ? "btn btn-sm md:btn-md mr-0.5 md:mr-4 text-lg font-semibold btn-outline border-secondary rounded-lg text-primary dark:text-white"
+                  : "btn btn-sm md:btn-md btn-outline border-4 border-primary mr-0.5 md:mr-4 text-base-100 dark:text-primary font-semibold"
               }
               to={"/signIn"}>
               Sign In
