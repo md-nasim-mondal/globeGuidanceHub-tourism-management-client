@@ -7,7 +7,7 @@ const Footer = () => {
         <aside>
           {/* <img className='w-20 md:w-32' src={logo} alt='' /> */}
           <p>
-            <span className='md:text-xl'><span className='flex flex-wrap text-sm xl:text-xl'>
+            <span className='md:text-xl'><span className='flex flex-wrap md:text-lg xl:text-3xl'>
             Globe
             <span className='text-primary'>GuidanceHub</span>
           </span> Company Ltd.</span>
